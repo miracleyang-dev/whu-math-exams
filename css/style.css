@@ -277,6 +277,7 @@ a:hover { color: var(--crimson-deep); }
   .header-inner { flex-direction: column; gap: 1.25rem; }
   .layout { grid-template-columns: 1fr; }
   .sidebar { position: static; }
+  body.search-active .sidebar { display: none; }
   .exam-row { grid-template-columns: 1fr; gap: .3rem; padding: .75rem; }
   .exam-row .actions { justify-content: flex-end; }
   #viewer-modal { padding: 0; }

@@ -69,7 +69,7 @@ window.addEventListener('error', e => {
             <span class="year">${e.academic_year} · 学期 ${e.semester}</span>
             <span class="meta"><span class="type">${labelType(e.exam_type)}</span>${e.teacher ? '任课：' + e.teacher : ''}</span>
             <span class="actions">
-              <a class="btn primary preview" href="#" data-path="${e.file_path}" data-title="${course.name} · ${e.academic_year}-${e.semester} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</a>
+              <a class="btn primary preview" href="${e.file_path}" data-path="${e.file_path}" data-title="${course.name} · ${e.academic_year}-${e.semester} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</a>
               <a class="btn" href="${e.file_path}" download>下载</a>
             </span>
           </div>
@@ -105,7 +105,20 @@ window.addEventListener('error', e => {
 
   // ---- Search ----
   let timer;
+  const mobileQuery = window.matchMedia('(max-width: 860px)');
+  function syncMobileSearchState() {
+    const active = mobileQuery.matches && (document.activeElement === search || search.value.trim() !== '');
+    document.body.classList.toggle('search-active', active);
+  }
+  search.addEventListener('focus', syncMobileSearchState);
+  search.addEventListener('blur', () => setTimeout(syncMobileSearchState, 0));
+  if (mobileQuery.addEventListener) {
+    mobileQuery.addEventListener('change', syncMobileSearchState);
+  } else {
+    mobileQuery.addListener(syncMobileSearchState);
+  }
   search.addEventListener('input', () => {
+    syncMobileSearchState();
     clearTimeout(timer);
     timer = setTimeout(() => {
       const q = search.value.trim().toLowerCase();
@@ -128,6 +141,12 @@ window.addEventListener('error', e => {
     const a = ev.target.closest('a.preview');
     if (!a) return;
     ev.preventDefault();
+    if (mobileQuery.matches) {
+      const win = window.open(a.dataset.path, '_blank');
+      if (win) win.opener = null;
+      if (!win) window.location.href = a.dataset.path;
+      return;
+    }
     document.getElementById('viewer-title').textContent = a.dataset.title;
     document.getElementById('viewer-download').href = a.dataset.path;
     document.getElementById('viewer-frame').src = a.dataset.path;
