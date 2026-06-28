@@ -1,0 +1,93 @@
+# 武汉大学数学与统计学院 · 本科试卷归档
+
+开源静态站，集中归档武大数统院**本科**历年试卷。仅收录 **LaTeX 排版 PDF**（或 LaTeX 源码编译产物），不收扫描件。
+
+## 目录结构
+
+```
+.
+├── index.html              # 单页入口
+├── css/style.css
+├── js/app.js               # 列表渲染 + 嵌入式 PDF 预览
+├── data/
+│   ├── courses.json        # 6 大分类 + 课程清单（结构基本不变）
+│   └── exams.json          # 集中维护：所有试卷元数据
+├── exams/                  # PDF 文件（Git LFS 跟踪）
+│   ├── 01-foundation/
+│   ├── 02-analysis-pde/
+│   ├── 03-algebra-numbertheory/
+│   ├── 04-geometry-topology/
+│   ├── 05-probability-statistics/
+│   └── 06-applied-computational/
+└── latex/                  # 可选：LaTeX 源码（未来启用）
+```
+
+## 一级分类（固定）
+
+1. 基础课程（仅数学分析、高等代数）
+2. 分析与微分方程
+3. 代数与数论
+4. 几何与拓扑
+5. 概率与统计
+6. 应用与计算数学
+
+## 元数据字段（exams.json 每条记录）
+
+| 字段 | 必填 | 说明 |
+|---|---|---|
+| `id`            | ✅ | 全局唯一，建议 `课程slug_学年-学期_类型_教师拼音` |
+| `category_id`   | ✅ | 对应 courses.json 的一级分类 id |
+| `course_slug`   | ✅ | 对应 courses.json 课程 slug |
+| `course_name_cn`| ✅ | 中文课程名（同实异名课分别立条目，不合并） |
+| `course_name_en`| ⭕ | 英文名 |
+| `course_code`   | ⭕ | 教务系统课程编号 |
+| `course_level`  | ✅ | 当前固定 `undergraduate` |
+| `academic_year` | ✅ | 如 `2023-2024` |
+| `semester`      | ✅ | `1` 或 `2` |
+| `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` |
+| `teacher`       | ⭕ | 任课教师，公开展示 |
+| `source`        | ⭕ | 来源（学长/教师本人/官方）便于版权追溯 |
+| `has_answer`    | ✅ | 当前阶段固定 `false`（暂不收录答案） |
+| `file_path`     | ✅ | 仓库内 PDF 相对路径 |
+| `latex_source`  | ⭕ | LaTeX 源码路径（如有） |
+| `sha256`        | ⭕ | 防重复 |
+
+## 文件命名规范
+
+`课程名_学年-学期_教师姓名.pdf`
+示例：`概率论_2023-1_张三.pdf`
+
+同课程 + 同学期 + 不同教师 → 用教师姓名区分。
+
+## 部署（Railway · 静态）
+
+仓库根目录添加 `Caddyfile`：
+
+```
+:{$PORT}
+root * .
+file_server
+try_files {path} /index.html
+```
+
+Railway 自动识别并以 Caddy 容器托管。
+
+## 贡献流程
+
+外部贡献者**不直接提交 PR**：将 LaTeX 排版的 PDF 与所需字段（见上表）发给项目维护者，由维护者统一入库。
+
+仓库地址：`https://github.com/<owner>/whu-math-exams`
+
+## 角色分工（以"概率与统计"模块为例，通用全部分类）
+
+| 角色 | 人数 | 工作项 |
+|---|---|---|
+| 模块负责人 | 1 | 课程清单维护、PR 审核、跨模块协调 |
+| 收集员 | 2-3 | 按清单收集 LaTeX 原件 / 教师授权 |
+| 整理员 | 1-2 | 重排为 LaTeX、生成 PDF、命名规范化、填元数据 |
+| 审核员 | 1 | 查重、字段核对、PR 合并 |
+
+## 资源存储方案
+
+- **当前**：仅 PDF（轻量、维护成本最低）
+- **未来可选**：LaTeX 源码同步入库（`latex/` 目录预留）

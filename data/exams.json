@@ -1,0 +1,8 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "description": "集中维护：所有试卷元数据。每份试卷一条记录。",
+    "field_rules": "见 README.md §元数据字段"
+  },
+  "exams": []
+}

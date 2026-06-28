@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>武汉大学数学与统计学院 · 本科试卷归档</title>
+  <link rel="stylesheet" href="css/style.css?v=5" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">珞</div>
+        <div>
+          <h1>武大数统院 · 本科试卷归档</h1>
+          <p class="subtitle">WHU School of Mathematics &amp; Statistics — Past Exams Archive</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="stat"><span id="stat-cat">6</span><label>分类</label></div>
+        <div class="stat"><span id="stat-course">0</span><label>课程</label></div>
+        <div class="stat"><span id="stat-exam">0</span><label>试卷</label></div>
+      </div>
+    </div>
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0c.41-.41.41-1.08 0-1.49L15.5 14m-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5S14 7.01 14 9.5S11.99 14 9.5 14"/></svg>
+      <input id="search" type="search" placeholder="搜索课程、教师、年份…" autocomplete="off" />
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside id="categories" class="sidebar"><div class="loading">加载中…</div></aside>
+    <section id="exam-list" class="content"><div class="loading">加载中…</div></section>
+  </main>
+
+  <div id="viewer-modal" hidden>
+    <div class="viewer-header">
+      <span id="viewer-title"></span>
+      <div class="viewer-actions">
+        <a id="viewer-download" download>下载</a>
+        <button id="viewer-close" aria-label="关闭">✕</button>
+      </div>
+    </div>
+    <iframe id="viewer-frame" src=""></iframe>
+  </div>
+
+  <footer class="site-footer">
+    <p>仅收录 LaTeX 排版 PDF · 投稿请发送给项目维护者</p>
+    <p><a href="https://github.com/">github.com/whu-math-exams</a></p>
+  </footer>
+
+  <script src="js/app.js?v=4"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>武汉大学数学与统计学院 · 本科试卷归档</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>武大数统院 · 本科试卷归档</h1>
+    <p class="subtitle">仅收录 LaTeX 排版 PDF · 开源协作</p>
+    <input id="search" type="search" placeholder="搜索课程名…" />
+  </header>
+
+  <main>
+    <nav id="categories"></nav>
+    <section id="exam-list"></section>
+  </main>
+
+  <div id="viewer-modal" hidden>
+    <div class="viewer-header">
+      <span id="viewer-title"></span>
+      <a id="viewer-download" download>下载</a>
+      <button id="viewer-close">关闭</button>
+    </div>
+    <iframe id="viewer-frame" src=""></iframe>
+  </div>
+
+  <footer>
+    <p>贡献者由后端添加 · <a href="https://github.com/">GitHub 源码</a></p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "scope": "武汉大学数学与统计学院 本科 试卷归档（合并近几年培养方案）",
+    "note": "同实异名课程分别立条目，不合并",
+    "fields_doc": "见 README.md §元数据字段"
+  },
+  "categories": [
+    {
+      "id": "01-foundation",
+      "name": "基础课程",
+      "courses": [
+        { "slug": "math-analysis",        "name": "数学分析" },
+        { "slug": "advanced-algebra",     "name": "高等代数" }
+      ]
+    },
+    {
+      "id": "02-analysis-pde",
+      "name": "分析与微分方程",
+      "courses": [
+        { "slug": "real-analysis",        "name": "实变函数" },
+        { "slug": "complex-analysis",     "name": "复变函数" },
+        { "slug": "functional-analysis",  "name": "泛函分析" },
+        { "slug": "ode",                  "name": "常微分方程" },
+        { "slug": "pde",                  "name": "偏微分方程" },
+        { "slug": "math-physics-eq",      "name": "数学物理方程" },
+        { "slug": "harmonic-analysis",    "name": "调和分析" },
+        { "slug": "measure-theory",       "name": "测度论" }
+      ]
+    },
+    {
+      "id": "03-algebra-numbertheory",
+      "name": "代数与数论",
+      "courses": [
+        { "slug": "abstract-algebra",     "name": "抽象代数" },
+        { "slug": "modern-algebra",       "name": "近世代数" },
+        { "slug": "elementary-number-theory", "name": "初等数论" },
+        { "slug": "algebraic-number-theory",  "name": "代数数论" },
+        { "slug": "group-representation", "name": "群表示论" },
+        { "slug": "commutative-algebra",  "name": "交换代数" },
+        { "slug": "lie-algebra",          "name": "李代数" },
+        { "slug": "homological-algebra",  "name": "同调代数" }
+      ]
+    },
+    {
+      "id": "04-geometry-topology",
+      "name": "几何与拓扑",
+      "courses": [
+        { "slug": "analytic-geometry",    "name": "解析几何" },
+        { "slug": "geometry",             "name": "几何学" },
+        { "slug": "differential-geometry","name": "微分几何" },
+        { "slug": "differential-manifold","name": "微分流形" },
+        { "slug": "point-set-topology",   "name": "点集拓扑" },
+        { "slug": "algebraic-topology",   "name": "代数拓扑" },
+        { "slug": "riemannian-geometry",  "name": "黎曼几何" }
+      ]
+    },
+    {
+      "id": "05-probability-statistics",
+      "name": "概率与统计",
+      "courses": [
+        { "slug": "probability-theory",        "name": "概率论" },
+        { "slug": "mathematical-statistics",   "name": "数理统计" },
+        { "slug": "prob-and-stat",             "name": "概率论与数理统计" },
+        { "slug": "stochastic-process",        "name": "随机过程" },
+        { "slug": "applied-stochastic",        "name": "应用随机过程" },
+        { "slug": "multivariate-statistics",   "name": "多元统计分析" },
+        { "slug": "time-series-analysis",      "name": "时间序列分析" },
+        { "slug": "applied-time-series",       "name": "应用时间序列" },
+        { "slug": "sampling-survey",           "name": "抽样调查" },
+        { "slug": "nonparametric-statistics",  "name": "非参数统计" },
+        { "slug": "experimental-design",       "name": "试验设计" },
+        { "slug": "bayesian-statistics",       "name": "贝叶斯统计" },
+        { "slug": "statistical-computing",     "name": "统计计算" },
+        { "slug": "applied-regression",        "name": "应用回归分析" },
+        { "slug": "actuarial-science",         "name": "寿险精算" },
+        { "slug": "actuarial-model",           "name": "精算模型" },
+        { "slug": "risk-theory",               "name": "风险理论" },
+        { "slug": "survival-analysis",         "name": "生存分析" },
+        { "slug": "statistical-learning",      "name": "统计学习" },
+        { "slug": "financial-statistics",      "name": "金融统计" }
+      ]
+    },
+    {
+      "id": "06-applied-computational",
+      "name": "应用与计算数学",
+      "courses": [
+        { "slug": "numerical-analysis",     "name": "数值分析" },
+        { "slug": "numerical-algebra",      "name": "数值代数" },
+        { "slug": "numerical-pde",          "name": "微分方程数值解" },
+        { "slug": "optimization",           "name": "最优化方法" },
+        { "slug": "operations-research",    "name": "运筹学" },
+        { "slug": "math-modeling",          "name": "数学建模" },
+        { "slug": "math-experiment",        "name": "数学实验" },
+        { "slug": "scientific-computing",   "name": "科学计算" },
+        { "slug": "data-structure",         "name": "数据结构" },
+        { "slug": "algorithm-design",       "name": "算法设计与分析" },
+        { "slug": "python-programming",     "name": "Python程序设计" },
+        { "slug": "cpp-programming",        "name": "C++程序设计" },
+        { "slug": "database",               "name": "数据库原理" },
+        { "slug": "machine-learning",       "name": "机器学习" },
+        { "slug": "deep-learning",          "name": "深度学习" }
+      ]
+    }
+  ]
+}
