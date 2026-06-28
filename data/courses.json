@@ -10,8 +10,11 @@
       "id": "01-foundation",
       "name": "基础课程",
       "courses": [
-        { "slug": "math-analysis",        "name": "数学分析" },
-        { "slug": "advanced-algebra",     "name": "高等代数" }
+        { "slug": "math-analysis-1",        "name": "数学分析1" },
+        { "slug": "math-analysis-2",        "name": "数学分析2" },
+        { "slug": "math-analysis-3",        "name": "数学分析3" },
+        { "slug": "advanced-algebra-1",     "name": "高等代数1" },
+        { "slug": "advanced-algebra-2",     "name": "高等代数2" }
       ]
     },
     {

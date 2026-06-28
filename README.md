@@ -24,7 +24,7 @@
 
 ## 一级分类（固定）
 
-1. 基础课程（仅数学分析、高等代数）
+1. 基础课程（数学分析1/2/3、高等代数1/2）
 2. 分析与微分方程
 3. 代数与数论
 4. 几何与拓扑
@@ -33,14 +33,15 @@
 
 ## 按模块贡献分工
 
-| 模块 | 主要课程范围 | 负责人 |
-|---|---|---|---|
-| 基础课程 | 数学分析、高等代数 | 待定 |
-| 分析与微分方程 | 实变、复变、泛函、常微分、偏微分等 | 待定 |
-| 代数与数论 | 抽象代数、近世代数、数论、表示论等 | 待定 |
-| 几何与拓扑 | 解析几何、微分几何、拓扑、黎曼几何等 | 待定 |
-| 概率与统计 | 概率论、数理统计、随机过程 | 待定 |
-| 应用与计算数学 | 数值分析、优化、运筹、建模、计算机类课程等 | 待定 |
+| 模块 | 整理 | 检查 |
+|---|---|---|
+| **总** | 待定 | 待定 |
+| 基础课程 | 待定 | 待定 |
+| 分析与微分方程 | 待定 | 待定 |
+| 代数与数论 | 待定 | 待定 |
+| 几何与拓扑 | 待定 | 待定 |
+| 概率与统计 | 待定 | 待定 |
+| 应用与计算数学 | 待定 | 待定 |
 
 ## 元数据字段（exams.json 每条记录）
 
@@ -51,8 +52,8 @@
 | `course_slug`   | ✅ | 对应 courses.json 课程 slug |
 | `course_name_cn`| ✅ | 中文课程名（同实异名课分别立条目，不合并） |
 | `course_level`  | ✅ | 当前固定 `undergraduate` |
-| `academic_year` | ✅ | 如 `2023-2024` |
-| `semester`      | ✅ | `1` 或 `2` |
+| `academic_year` | ⭕ | 如 `2023-2024`，未知则留空 |
+| `semester`      | ⭕ | `1` 或 `2`，未知则留空 |
 | `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` |
 | `teacher`       | ⭕ | 任课教师，公开展示 |
 | `file_path`     | ✅ | 仓库内 PDF 相对路径 |
@@ -94,7 +95,7 @@ Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。仓库已移除
 ## 本地新增或重新生成 PDF 后需要同步修改
 
 1. 将真实 PDF 文件放入 `exams/<category_id>/<course_slug>/`，文件名遵守上方命名规范。
-2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`academic_year`、`semester`、`exam_type`、`file_path`、`sha256`。
+2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`exam_type`、`file_path`、`sha256`。
 3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
 4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
 5. 不需要修改 `.gitattributes`，也不需要执行任何 `git lfs` 命令；直接提交 PDF 与 JSON 变更即可。

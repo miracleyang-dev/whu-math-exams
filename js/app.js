@@ -62,14 +62,14 @@ window.addEventListener('error', e => {
         const exs = allExams
           .filter(e => e.course_slug === course.slug)
           .filter(filterFn || (() => true))
-          .sort((a, b) => (b.academic_year + b.semester).localeCompare(a.academic_year + a.semester));
+          .sort((a, b) => ((b.academic_year || '') + (b.semester || '')).localeCompare((a.academic_year || '') + (a.semester || '')));
         if (!exs.length && filterFn) return '';
         const rows = exs.length ? exs.map(e => `
           <div class="exam-row">
-            <span class="year">${e.academic_year} · 学期 ${e.semester}</span>
+            <span class="year">${formatTimeLabel(e)}</span>
             <span class="meta"><span class="type">${labelType(e.exam_type)}</span>${e.teacher ? '任课：' + e.teacher : ''}</span>
             <span class="actions">
-              <a class="btn primary preview" href="${e.file_path}" data-path="${e.file_path}" data-title="${course.name} · ${e.academic_year}-${e.semester} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</a>
+              <a class="btn primary preview" href="${e.file_path}" data-path="${e.file_path}" data-title="${course.name} · ${formatTimeLabel(e)} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</a>
               <a class="btn" href="${e.file_path}" download>下载</a>
             </span>
           </div>
@@ -98,6 +98,12 @@ window.addEventListener('error', e => {
 
   function labelType(t) {
     return ({ final: '期末', midterm: '期中', makeup: '补考', mock: '模拟' })[t] || t;
+  }
+
+  function formatTimeLabel(e) {
+    if (!e.academic_year && !e.semester) return '时间未知';
+    if (e.academic_year && e.semester) return `${e.academic_year} · 学期 ${e.semester}`;
+    return e.academic_year || `学期 ${e.semester}`;
   }
 
   buildSidebar();
@@ -131,7 +137,8 @@ window.addEventListener('error', e => {
       render(e =>
         courseMatch.has(e.course_slug) ||
         (e.teacher || '').toLowerCase().includes(q) ||
-        e.academic_year.includes(q)
+        (e.academic_year || '').includes(q) ||
+        (e.semester || '').includes(q)
       );
     }, 120);
   });
@@ -141,15 +148,13 @@ window.addEventListener('error', e => {
     const a = ev.target.closest('a.preview');
     if (!a) return;
     ev.preventDefault();
-    if (mobileQuery.matches) {
-      const win = window.open(a.dataset.path, '_blank');
-      if (win) win.opener = null;
-      if (!win) window.location.href = a.dataset.path;
-      return;
-    }
+    const filePath = a.dataset.path;
+    const fullUrl = new URL(filePath, window.location.origin).href;
     document.getElementById('viewer-title').textContent = a.dataset.title;
-    document.getElementById('viewer-download').href = a.dataset.path;
-    document.getElementById('viewer-frame').src = a.dataset.path;
+    document.getElementById('viewer-download').href = filePath;
+    document.getElementById('viewer-online').href =
+      'https://docs.google.com/gview?url=' + encodeURIComponent(fullUrl) + '&embedded=true';
+    document.getElementById('viewer-frame').src = filePath;
     document.getElementById('viewer-modal').hidden = false;
     document.body.style.overflow = 'hidden';
   });
