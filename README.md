@@ -50,15 +50,12 @@
 | `category_id`   | ✅ | 对应 courses.json 的一级分类 id |
 | `course_slug`   | ✅ | 对应 courses.json 课程 slug |
 | `course_name_cn`| ✅ | 中文课程名（同实异名课分别立条目，不合并） |
-| `course_name_en`| ⭕ | 英文名 |
 | `course_level`  | ✅ | 当前固定 `undergraduate` |
 | `academic_year` | ✅ | 如 `2023-2024` |
 | `semester`      | ✅ | `1` 或 `2` |
 | `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` |
 | `teacher`       | ⭕ | 任课教师，公开展示 |
-| `has_answer`    | ✅ | 当前阶段固定 `false`（暂不收录答案） |
 | `file_path`     | ✅ | 仓库内 PDF 相对路径 |
-| `latex_source`  | ⭕ | LaTeX 源码路径（如有） |
 | `sha256`        | ⭕ | 防重复 |
 
 ## 文件命名规范
@@ -97,7 +94,7 @@ Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。仓库已移除
 ## 本地新增或重新生成 PDF 后需要同步修改
 
 1. 将真实 PDF 文件放入 `exams/<category_id>/<course_slug>/`，文件名遵守上方命名规范。
-2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`academic_year`、`semester`、`exam_type`、`has_answer`、`file_path`、`sha256`。
+2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`academic_year`、`semester`、`exam_type`、`file_path`、`sha256`。
 3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
 4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
 5. 不需要修改 `.gitattributes`，也不需要执行任何 `git lfs` 命令；直接提交 PDF 与 JSON 变更即可。
