@@ -46,18 +46,16 @@
 
 | 字段 | 必填 | 说明 |
 |---|---|---|
-| `id`            | ✅ | 全局唯一，建议 `课程slug_学年-学期_类型_教师拼音` |
+| `id`            | ✅ | 全局唯一，建议 `课程slug_学年-学期_类型_教师` |
 | `category_id`   | ✅ | 对应 courses.json 的一级分类 id |
 | `course_slug`   | ✅ | 对应 courses.json 课程 slug |
 | `course_name_cn`| ✅ | 中文课程名（同实异名课分别立条目，不合并） |
 | `course_name_en`| ⭕ | 英文名 |
-| `course_code`   | ⭕ | 教务系统课程编号 |
 | `course_level`  | ✅ | 当前固定 `undergraduate` |
 | `academic_year` | ✅ | 如 `2023-2024` |
 | `semester`      | ✅ | `1` 或 `2` |
 | `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` |
 | `teacher`       | ⭕ | 任课教师，公开展示 |
-| `source`        | ⭕ | 来源（学长/教师本人/官方）便于版权追溯 |
 | `has_answer`    | ✅ | 当前阶段固定 `false`（暂不收录答案） |
 | `file_path`     | ✅ | 仓库内 PDF 相对路径 |
 | `latex_source`  | ⭕ | LaTeX 源码路径（如有） |
