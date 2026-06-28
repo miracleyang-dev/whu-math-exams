@@ -12,7 +12,7 @@
 ├── data/
 │   ├── courses.json        # 6 大分类 + 课程清单（结构基本不变）
 │   └── exams.json          # 集中维护：所有试卷元数据
-├── exams/                  # PDF 文件（Git LFS 跟踪）
+├── exams/                  # PDF 文件（普通 Git 文件，不使用 Git LFS）
 │   ├── 01-foundation/
 │   ├── 02-analysis-pde/
 │   ├── 03-algebra-numbertheory/
@@ -79,13 +79,28 @@ file_server
 try_files {path} /index.html
 ```
 
-Railway 自动识别并以 Caddy 容器托管。
+Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。仓库已移除 Git LFS：不要再配置 `git lfs install`、`git lfs pull`、Nixpacks Build Command 或其他 LFS 相关构建步骤。
+
+### Railway 同步操作
+
+1. 将移除 LFS 后的提交推送到 GitHub 默认分支。
+2. 在 Railway 项目中确认服务仍连接该 GitHub 仓库/分支。
+3. 如曾手动配置过 LFS 相关 Build Command/Start Command，删除这些自定义命令，让 Railway 使用仓库根目录 `Dockerfile`。
+4. 触发一次 Redeploy；之后 GitHub 新提交会按 Railway 的 GitHub 集成自动同步部署。
 
 ## 贡献流程
 
 外部贡献者**不直接提交 PR**：将 LaTeX 排版的 PDF 与所需字段（见上表）发给项目维护者，由维护者统一入库。
 
 仓库地址：`https://github.com/<owner>/whu-math-exams`
+
+## 本地新增或重新生成 PDF 后需要同步修改
+
+1. 将真实 PDF 文件放入 `exams/<category_id>/<course_slug>/`，文件名遵守上方命名规范。
+2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`academic_year`、`semester`、`exam_type`、`has_answer`、`file_path`、`sha256`。
+3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
+4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
+5. 不需要修改 `.gitattributes`，也不需要执行任何 `git lfs` 命令；直接提交 PDF 与 JSON 变更即可。
 
 ## 资源存储方案
 
