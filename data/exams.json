@@ -4,5 +4,66 @@
     "description": "集中维护：所有试卷元数据。每份试卷一条记录。",
     "field_rules": "见 README.md §元数据字段"
   },
-  "exams": []
+  "exams": [
+    {
+      "id": "probability-theory_2024-2025-2_final_liuwei-ziqiang",
+      "category_id": "05-probability-statistics",
+      "course_slug": "probability-theory",
+      "course_name_cn": "概率论",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "刘伟",
+      "source": "供需群同学整理分享",
+      "has_answer": false,
+      "file_path": "exams/05-probability-statistics/probability-theory/概率论_2024-2025-2_刘伟_自强班.pdf",
+      "sha256": "832476ed39f1b2816a4cd71512a6eb64c7de8df3a2bb91a9d3293dd74503a31d"
+    },
+    {
+      "id": "probability-theory_2024-2025-2_final_gaofuqing-wangran",
+      "category_id": "05-probability-statistics",
+      "course_slug": "probability-theory",
+      "course_name_cn": "概率论",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "高付清、王冉",
+      "source": "供需群同学整理分享",
+      "has_answer": false,
+      "file_path": "exams/05-probability-statistics/probability-theory/概率论_2024-2025-2_高付清-王冉.pdf",
+      "sha256": "848aedf34de2f91875ba0fed9c4d2002d8a46ef272d1e510522757a4c3526e51"
+    },
+    {
+      "id": "probability-theory_2025-2026-2_final_gaofuqing",
+      "category_id": "05-probability-statistics",
+      "course_slug": "probability-theory",
+      "course_name_cn": "概率论",
+      "course_level": "undergraduate",
+      "academic_year": "2025-2026",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "高付清",
+      "source": "供需群同学整理分享；回忆版",
+      "has_answer": false,
+      "file_path": "exams/05-probability-statistics/probability-theory/概率论_2025-2026-2_高付清.pdf",
+      "sha256": "b3addce842a2c1dbc2edc83f21b3202cbb7713dfb3f3055d30582c7a8a38ca9c"
+    },
+    {
+      "id": "probability-theory_2025-2026-2_final_wangran",
+      "category_id": "05-probability-statistics",
+      "course_slug": "probability-theory",
+      "course_name_cn": "概率论",
+      "course_level": "undergraduate",
+      "academic_year": "2025-2026",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "王冉",
+      "source": "供需群同学整理分享",
+      "has_answer": false,
+      "file_path": "exams/05-probability-statistics/probability-theory/概率论_2025-2026-2_王冉.pdf",
+      "sha256": "7a673800b643dda3ed37405a16a9ffd1797acaf89346bda279eee87ecf7ce6b9"
+    }
+  ]
 }
