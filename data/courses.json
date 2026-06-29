@@ -76,7 +76,13 @@
         { "slug": "math-experiment",        "name": "数学实验" },
         { "slug": "data-structure",         "name": "数据结构" },
         { "slug": "machine-learning",       "name": "机器学习" },
-        { "slug": "deep-learning",          "name": "深度学习" }
+        { "slug": "deep-learning",          "name": "深度学习" },
+        { "slug": "optimization-theory-methods", "name": "优化理论与方法" },
+        { "slug": "multiscale-analysis",    "name": "多尺度分析" },
+        { "slug": "data-science-introduction", "name": "数据科学引论" },
+        { "slug": "discrete-mathematics",   "name": "离散数学" },
+        { "slug": "computational-mechanics", "name": "计算力学" },
+        { "slug": "quantum-information-and-quantum-computing-basic", "name": "量子信息与量子计算基础" }
       ]
     }
   ]
