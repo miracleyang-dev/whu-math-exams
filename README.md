@@ -1,47 +1,35 @@
 # 武汉大学数学与统计学院 · 本科试卷归档
 
-开源静态站，集中归档武大数统院**本科**历年试卷。仅收录 **LaTeX 排版 PDF**（或 LaTeX 源码编译产物），不收扫描件。
+开源静态站，集中归档武大数统院**本科**历年试卷。仅收录 **LaTeX 排版 PDF**。
 
 ## 目录结构
 
 ```
-.
-├── index.html              # 单页入口
+whu-math-exams/
+├── index.html                 # 网站单页入口
 ├── css/style.css
-├── js/app.js               # 列表渲染 + 嵌入式 PDF 预览
+├── js/app.js                  # 列表渲染 + 嵌入式 PDF 预览
 ├── data/
-│   ├── courses.json        # 6 大分类 + 课程清单（结构基本不变）
-│   └── exams.json          # 集中维护：所有试卷元数据
-├── exams/                  # PDF 文件（普通 Git 文件，不使用 Git LFS）
+│   ├── courses.json           # 6 大分类 + 课程清单
+│   └── exams.json             # 集中维护：所有试卷元数据
+├── exams/                     # PDF 文件
 │   ├── 01-foundation/
 │   ├── 02-analysis-pde/
 │   ├── 03-algebra-numbertheory/
 │   ├── 04-geometry-topology/
 │   ├── 05-probability-statistics/
 │   └── 06-applied-computational/
-└── latex/                  # 可选：LaTeX 源码（未来启用）
+└── README.md                  # 项目说明
 ```
 
 ## 一级分类（固定）
 
-1. 基础课程（数学分析1/2/3、高等代数1/2）
+1. 基础课程（数分、高代等）
 2. 分析与微分方程
 3. 代数与数论
 4. 几何与拓扑
 5. 概率与统计
 6. 应用与计算数学
-
-## 按模块贡献分工
-
-| 模块 | 整理 | 检查 |
-|---|---|---|
-| **总** | 待定 | 待定 |
-| 基础课程 | 待定 | 待定 |
-| 分析与微分方程 | 待定 | 待定 |
-| 代数与数论 | 待定 | 待定 |
-| 几何与拓扑 | 待定 | 待定 |
-| 概率与统计 | 待定 | 待定 |
-| 应用与计算数学 | 待定 | 待定 |
 
 ## 元数据字段（exams.json 每条记录）
 
@@ -77,20 +65,13 @@ file_server
 try_files {path} /index.html
 ```
 
-Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。仓库已移除 Git LFS：不要再配置 `git lfs install`、`git lfs pull`、Nixpacks Build Command 或其他 LFS 相关构建步骤。
-
-### Railway 同步操作
-
-1. 将移除 LFS 后的提交推送到 GitHub 默认分支。
-2. 在 Railway 项目中确认服务仍连接该 GitHub 仓库/分支。
-3. 如曾手动配置过 LFS 相关 Build Command/Start Command，删除这些自定义命令，让 Railway 使用仓库根目录 `Dockerfile`。
-4. 触发一次 Redeploy；之后 GitHub 新提交会按 Railway 的 GitHub 集成自动同步部署。
+Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。
 
 ## 贡献流程
 
 外部贡献者**不直接提交 PR**：将 LaTeX 排版的 PDF 与所需字段（见上表）发给项目维护者，由维护者统一入库。
 
-仓库地址：`https://github.com/<owner>/whu-math-exams`
+仓库地址：`https://github.com/miracleyang-dev/whu-math-exams`
 
 ## 本地新增或重新生成 PDF 后需要同步修改
 
@@ -98,12 +79,6 @@ Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。仓库已移除
 2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`exam_type`、`file_path`、`sha256`。
 3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
 4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
-5. 不需要修改 `.gitattributes`，也不需要执行任何 `git lfs` 命令；直接提交 PDF 与 JSON 变更即可。
-
-## 资源存储方案
-
-- **当前**：仅 PDF（轻量、维护成本最低）
-- **未来可选**：LaTeX 源码同步入库（`latex/` 目录预留）
 
 ## License / 使用说明
 
