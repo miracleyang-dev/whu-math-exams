@@ -522,7 +522,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2019_2020_1_期末_未知.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2019-2020-1_期末_未知.pdf",
       "sha256": "d36163592c935d8777242891d66762c5f1372719a2447dff8413dc2a8a78b945"
     },
     {
@@ -535,7 +535,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "汪春晖",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2020_2021_1_期中_汪春晖.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2020-2021-1_期中_汪春晖.pdf",
       "sha256": "f98f12f77d1559419a7b72132e70aa62e8b767013f245d4a2af559e8c36624d2"
     },
     {
@@ -548,7 +548,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "ZUOKANG",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2024_2025_1_期末_ZUOKANG.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2024-2025-1_期末_ZUOKANG.pdf",
       "sha256": "744a0eced9c379cd5d173e0ca71c895d6bfbfc139c5b7fda89ae4b2f8473d623"
     },
     {
@@ -561,7 +561,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "陈一萍",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2024_2025_1_期末_陈一萍.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2024-2025-1_期末_陈一萍.pdf",
       "sha256": "1bd688583b1a410afe27913362006143db3c16bd5c28f4e7038654632adbf278"
     },
     {
@@ -574,7 +574,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "ZUOKANG",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2024_2025_1_期中_ZUOKANG.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2024-2025-1_期中_ZUOKANG.pdf",
       "sha256": "894564467e085035a6a5b1c15d02bc3161beb2411a11a6a116b90ef0d8cd5622"
     },
     {
@@ -587,7 +587,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "陈一萍",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2025_2026_1_期中_陈一萍.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2025-2026-1_期中_陈一萍.pdf",
       "sha256": "b7239ed764bf73865cf435fb8ec848084390409819781e79292c36e64069d5b6"
     },
     {
@@ -600,7 +600,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "ZUOKANG",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2025_2026_1_期中_ZUOKANG.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2025-2026-1_期中_ZUOKANG.pdf",
       "sha256": "8bbc34a12422045cc477b9870abd4d96413007e5f17806f959785013b80ab287"
     },
     {
@@ -613,7 +613,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "陈一萍",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2025_2026_1_期末_陈一萍.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/抽象代数_2025-2026-1_期末_陈一萍.pdf",
       "sha256": "ba8b7aa6b18c93a2e491cc52c24b5acbfc328757916dfb8e6bf4f67d7f1a07ab"
     },
     {
@@ -626,8 +626,60 @@
       "semester": "2",
       "exam_type": "final",
       "teacher": "陈一萍",
-      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/代数2_2025_2026_2_期末_陈一萍.pdf",
+      "file_path": "exams/03-algebra-numbertheory/abstract-algebra/代数2_2025-2026-2_期末_陈一萍.pdf",
       "sha256": "2cd0b67470627cb73f85194a1b787003018f0f29d068e1d17758a0c7dbea86f9"
+    },
+    {
+      "id": "mathematical-statistics_2024-2025-2_final_liuyanyan",
+      "category_id": "05-probability-statistics",
+      "course_slug": "mathematical-statistics",
+      "course_name_cn": "数理统计",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "刘妍岩",
+      "file_path": "exams/05-probability-statistics/mathematical-statistics/数理统计_2024-2025-2_期末_刘妍岩.pdf",
+      "sha256": "4629af2cb54e2d254033b24790ae3c1f22835d69dd671f05962bce886646ad74"
+    },
+    {
+      "id": "mathematical-statistics_2024-2025-2_final_fengyanqin",
+      "category_id": "05-probability-statistics",
+      "course_slug": "mathematical-statistics",
+      "course_name_cn": "数理统计",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "冯艳钦",
+      "file_path": "exams/05-probability-statistics/mathematical-statistics/数理统计_2024-2025-2_期末_冯艳钦.pdf",
+      "sha256": "4344ecb6f5e0b7aef471a866e478ed459da11b1ae279253c3405f4ca4e2ba910"
+    },
+    {
+      "id": "mathematical-statistics_2024-2025-2_midterm_liuyanyan",
+      "category_id": "05-probability-statistics",
+      "course_slug": "mathematical-statistics",
+      "course_name_cn": "数理统计",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "midterm",
+      "teacher": "刘妍岩",
+      "file_path": "exams/05-probability-statistics/mathematical-statistics/数理统计_2024-2025-2_期中_刘妍岩.pdf",
+      "sha256": "870c5b41615cd94e1de57e010ecb63842d074d65dc08bd0e6f3e31cdea569567"
+    },
+    {
+      "id": "prob-and-stat_2024-2025-1_final_liuyanyan",
+      "category_id": "05-probability-statistics",
+      "course_slug": "prob-and-stat",
+      "course_name_cn": "概率论与数理统计",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "刘妍岩",
+      "file_path": "exams/05-probability-statistics/prob-and-stat/概率论与数理统计_2024-2025-1_期末_刘妍岩.pdf",
+      "sha256": "dda4f69e850c5e5e48ba1e3308cbf3cd612308589525897f336082a3ecfbceac"
     }
   ]
 }
