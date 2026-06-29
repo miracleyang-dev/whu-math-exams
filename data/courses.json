@@ -33,24 +33,18 @@
       "name": "代数与数论",
       "courses": [
         { "slug": "abstract-algebra",     "name": "抽象代数" },
-        { "slug": "elementary-number-theory", "name": "初等数论" },
-        { "slug": "algebraic-number-theory",  "name": "代数数论" },
-        { "slug": "group-representation", "name": "群表示论" },
-        { "slug": "commutative-algebra",  "name": "交换代数" },
-        { "slug": "lie-algebra",          "name": "李代数" },
-        { "slug": "homological-algebra",  "name": "同调代数" }
+        { "slug": "commutative-algebra",  "name": "交换代数" }
       ]
     },
     {
       "id": "04-geometry-topology",
       "name": "几何与拓扑",
       "courses": [
-        { "slug": "analytic-geometry",    "name": "解析几何" },
+        { "slug": "topology","name": "拓扑学" },
         { "slug": "differential-geometry","name": "微分几何" },
         { "slug": "differential-manifold","name": "微分流形" },
-        { "slug": "point-set-topology",   "name": "点集拓扑" },
-        { "slug": "algebraic-topology",   "name": "代数拓扑" },
-        { "slug": "riemannian-geometry",  "name": "黎曼几何" }
+        { "slug": "riemannian-geometry",  "name": "黎曼几何" },
+        { "slug": "homology-theory","name": "同调论" }
       ]
     },
     {
@@ -68,12 +62,12 @@
       "name": "应用与计算数学",
       "courses": [
         { "slug": "numerical-analysis",     "name": "数值分析" },
-        { "slug": "numerical-algebra",      "name": "数值代数" },
+        { "slug": "numerical-algebra",      "name": "数值线性代数" },
         { "slug": "numerical-pde",          "name": "微分方程数值解" },
-        { "slug": "math-modeling",          "name": "数学建模" },
+        { "slug": "math-modeling",          "name": "数学模型" },
         { "slug": "math-experiment",        "name": "数学实验" },
         { "slug": "machine-learning",       "name": "机器学习" },
-        { "slug": "deep-learning",          "name": "深度学习" },
+        { "slug": "deep-learning",          "name": "神经网络与深度学习" },
         { "slug": "optimization-theory-methods", "name": "优化理论与方法" },
         { "slug": "multiscale-analysis",    "name": "多尺度分析" },
         { "slug": "data-science-introduction", "name": "数据科学引论" },
