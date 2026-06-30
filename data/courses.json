@@ -77,6 +77,15 @@
         { "slug": "computational-mechanics", "name": "计算力学" },
         { "slug": "quantum-information-and-quantum-computing-basic", "name": "量子信息与量子计算基础" }
       ]
+    },
+    {
+      "id": "07-zhongfa-class",
+      "name": "中法数学班",
+      "courses": [
+        { "slug": "fra-analysis",          "name": "分析" },
+        { "slug": "fra-algebra",           "name": "代数" },
+        { "slug": "fra-discrete-prob-ode", "name": "离散概率论和常微分方程" }
+      ]
     }
   ]
 }

@@ -43,7 +43,7 @@ window.addEventListener('error', e => {
       const grp = document.createElement('div');
       grp.className = 'cat-group';
       grp.innerHTML = `
-        <div class="cat-title">${cat.name}<span class="count">${cat.courses.length}</span></div>
+        <div class="cat-title">${cat.name}<span class="count">${examsInCat}</span></div>
       ` + cat.courses.map(c => {
         const cnt = allExams.filter(e => e.course_slug === c.slug).length;
         return `<a href="#${cat.id}-${c.slug}" class="${cnt ? 'has-exam' : ''}">
@@ -97,7 +97,7 @@ window.addEventListener('error', e => {
   }
 
   function labelType(t) {
-    return ({ final: '期末', midterm: '期中', makeup: '补考', mock: '模拟' })[t] || t;
+    return ({ final: '期末', midterm: '期中', makeup: '补考', mock: '模拟', quiz: '小测' })[t] || t;
   }
 
   function formatTimeLabel(e) {
