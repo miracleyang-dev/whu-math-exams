@@ -209,6 +209,7 @@ a:hover { color: var(--crimson-deep); }
   font-size: .8rem; padding: .3rem .7rem; border-radius: 4px;
   border: 1px solid var(--line); background: var(--paper); color: var(--ink-2);
   cursor: pointer; transition: all .12s; text-decoration: none;
+  font-family: inherit; line-height: 1.4;
 }
 .exam-row .btn:hover { border-color: var(--crimson); color: var(--crimson); }
 .exam-row .btn.primary { background: var(--crimson); color: #fff; border-color: var(--crimson); }
@@ -264,6 +265,42 @@ a:hover { color: var(--crimson-deep); }
 #viewer-frame {
   flex: 1; border: none; background: #fff;
   border-radius: 0 0 var(--radius) var(--radius);
+}
+#viewer-frame[hidden] { display: none; }
+#viewer-mobile {
+  flex: 1;
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 0 0 var(--radius) var(--radius);
+  text-align: center;
+}
+#viewer-mobile[hidden] { display: none; }
+#viewer-mobile p {
+  max-width: 28rem;
+  margin: 0 auto;
+  color: var(--ink-2);
+}
+.viewer-mobile-actions {
+  display: flex;
+  justify-content: center;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+.viewer-mobile-actions a {
+  background: var(--crimson);
+  color: #fff;
+  padding: .65rem 1rem;
+  border-radius: 6px;
+  font-size: .9rem;
+  text-decoration: none;
+}
+.viewer-mobile-actions a:last-child {
+  background: var(--paper);
+  color: var(--crimson);
+  border: 1px solid var(--crimson);
 }
 
 /* ===== Footer ===== */
@@ -324,6 +361,7 @@ a:hover { color: var(--crimson-deep); }
   .viewer-actions { gap: .35rem; }
   .viewer-actions a, .viewer-actions button { padding: .3rem .65rem; font-size: .78rem; }
   #viewer-frame { border-radius: 0; }
+  #viewer-mobile { border-radius: 0; padding: 1.5rem; }
 }
 
 /* Small phones */
