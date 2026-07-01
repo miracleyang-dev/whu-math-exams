@@ -188,7 +188,7 @@
       "sha256": null
     },
     {
-      "id": "commutative-algebra_2021-2022-2_final_unknown",
+      "id": "commutative-algebra_2021-2022-2_final_xuejiangwei",
       "category_id": "03-algebra-numbertheory",
       "course_slug": "commutative-algebra",
       "course_name_cn": "交换代数",
@@ -196,8 +196,8 @@
       "academic_year": "2021-2022",
       "semester": "2",
       "exam_type": "final",
-      "teacher": "未知",
-      "file_path": "exams/03-algebra-numbertheory/commutative-algebra/交换代数_2021-2022-2_期末_未知.pdf",
+      "teacher": "薛江维",
+      "file_path": "exams/03-algebra-numbertheory/commutative-algebra/交换代数_2021-2022-2_期末_薛江维.pdf",
       "sha256": "8b481867867bf81914b71cd217c129485870129282398c87f6a39fd7476559ea"
     },
     {
@@ -614,7 +614,7 @@
       "exam_type": "final",
       "teacher": "冯艳钦",
       "file_path": "exams/05-probability-statistics/mathematical-statistics/数理统计_2024-2025-2_期末_冯艳钦.pdf",
-      "sha256": "4344ecb6f5e0b7aef471a866e478ed459da11b1ae279253c3405f4ca4e2ba910"
+      "sha256": "12848de63f1b566cd356a5da55121a605c57820d3867d7f40bcc2876e8edf901"
     },
     {
       "id": "mathematical-statistics_2024-2025-2_midterm_liuyanyan",
@@ -643,9 +643,9 @@
       "sha256": "dda4f69e850c5e5e48ba1e3308cbf3cd612308589525897f336082a3ecfbceac"
     },
     {
-      "id": "fra-analysis_2024-2025-1_final_liaolingmin",
+      "id": "fra-analysis-i_2024-2025-1_final_liaolingmin",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-i",
       "course_name_cn": "分析I(习题)",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
@@ -656,9 +656,9 @@
       "sha256": "e96ca1bec4600e5c71bed6eb3c1fd0dd64659008b8e841ac50abbdcc22527367"
     },
     {
-      "id": "fra-analysis_2024-2025-2_final_liaolingmin",
+      "id": "fra-analysis-ii_2024-2025-2_final_liaolingmin",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-ii",
       "course_name_cn": "分析II(习题)",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
@@ -669,9 +669,9 @@
       "sha256": "6b1135bc6d37f58af8f9f2de3be5b751ad1fcff5f165172e85f17fef046c9d96"
     },
     {
-      "id": "fra-analysis_2025-2026-1_midterm_miaoshuang-majihua",
+      "id": "fra-analysis-iii_2025-2026-1_midterm_miaoshuang-majihua",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-iii",
       "course_name_cn": "分析III",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -682,9 +682,9 @@
       "sha256": "7830bb28f9934d44e9e5bbe4afe1a1fc47d27c613a9a35dabf8e84f01cf5ec77"
     },
     {
-      "id": "fra-analysis_2024-2025-2_midterm_miaoshuang-liaolingmin",
+      "id": "fra-analysis-ii_2024-2025-2_midterm_miaoshuang-liaolingmin",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-ii",
       "course_name_cn": "分析II",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
@@ -695,9 +695,9 @@
       "sha256": "8a0c7a9fd1534ea88b1885d0e8280c5804abe2486af78f35db671b6b2ed7a244"
     },
     {
-      "id": "fra-analysis_2025-2026-2_quiz1_liaolingmin",
+      "id": "fra-analysis-ii_2025-2026-2_quiz1_liaolingmin",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-ii",
       "course_name_cn": "分析II",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -708,9 +708,9 @@
       "sha256": "c6fd8b95fbc2a9944507fb49efe153f55d62e977a7041c544e6c8c1c6e699388"
     },
     {
-      "id": "fra-analysis_2025-2026-2_midterm_liaolingmin",
+      "id": "fra-analysis-ii_2025-2026-2_midterm_liaolingmin",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-ii",
       "course_name_cn": "分析II",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -721,9 +721,9 @@
       "sha256": "bc4a1e6090efff069065967117efa68e7cac709a32ee07ec773cbf093f3693b5"
     },
     {
-      "id": "fra-analysis_2025-2026-2_quiz1_philippemarchal",
+      "id": "fra-analysis-iv_2025-2026-2_quiz1_philippemarchal",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-iv",
       "course_name_cn": "分析IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -734,9 +734,9 @@
       "sha256": "13f86d2e2f27ec154fad797ab9fd0c4b8975de275e6ad1516d626f8496ee81a4"
     },
     {
-      "id": "fra-analysis_2025-2026-2_midterm_ludovickgagnon",
+      "id": "fra-analysis-iv_2025-2026-2_midterm_ludovickgagnon",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-iv",
       "course_name_cn": "分析IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -747,9 +747,9 @@
       "sha256": "28c2847a7cae90e1c8a02debc86907029e5b558064715669575344e25c89befa"
     },
     {
-      "id": "fra-analysis_2025-2026-2_final_philippemarchal",
+      "id": "fra-analysis-iv_2025-2026-2_final_philippemarchal",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-iv",
       "course_name_cn": "分析IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -760,9 +760,9 @@
       "sha256": "80569b511e854d43bc71cbc9d6db485abf16b69dcb9ccdb6674364f543805c3a"
     },
     {
-      "id": "fra-analysis_2025-2026-1_midterm_liaolingmin",
+      "id": "fra-analysis-i_2025-2026-1_midterm_liaolingmin",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-analysis",
+      "course_slug": "fra-analysis-i",
       "course_name_cn": "分析I",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -773,9 +773,9 @@
       "sha256": "be6cb09485458a26fd02b4306294e65e0c6feb9d4398a62cb1a5a8eb1236930d"
     },
     {
-      "id": "fra-algebra_2025-2026-1_final_xuejiangwei",
+      "id": "fra-algebra-iii_2025-2026-1_final_xuejiangwei",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-iii",
       "course_name_cn": "代数III",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -786,9 +786,9 @@
       "sha256": "f3c91b81d188399b4c141febd0233a5a9a25ce2cf423457f1f61e328b16351ff"
     },
     {
-      "id": "fra-algebra_2024-2025-2_midterm_xuejiangwei-linxingjun",
+      "id": "fra-algebra-ii_2024-2025-2_midterm_xuejiangwei-linxingjun",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-ii",
       "course_name_cn": "代数II",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
@@ -799,9 +799,9 @@
       "sha256": "5398e5a50c96ce13fed93b5673af5d79dee786736b0acd74f1b32a3443a4755b"
     },
     {
-      "id": "fra-algebra_2025-2026-2_quiz1_wanghaowu",
+      "id": "fra-algebra-ii_2025-2026-2_quiz1_wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-ii",
       "course_name_cn": "代数II",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -812,9 +812,9 @@
       "sha256": "430dba013e69de5405329a12e4600cc03720b7339014b2162e9eaf48da8dec47"
     },
     {
-      "id": "fra-algebra_2025-2026-2_quiz2_wanghaowu",
+      "id": "fra-algebra-ii_2025-2026-2_quiz2_wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-ii",
       "course_name_cn": "代数II",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -825,9 +825,9 @@
       "sha256": "b5cb2ad5bb01cb2b5b9194e2e751f08bd277802835a097455df331c450321555"
     },
     {
-      "id": "fra-algebra_2025-2026-2_midterm_wanghaowu",
+      "id": "fra-algebra-ii_2025-2026-2_midterm_wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-ii",
       "course_name_cn": "代数II",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -838,9 +838,9 @@
       "sha256": "27b1f86de87b3bc8ef3500e1191ec11c56bde6f03adf74e46d8decad59d90f11"
     },
     {
-      "id": "fra-algebra_2025-2026-2_quiz1_davidrenard",
+      "id": "fra-algebra-iv_2025-2026-2_quiz1_davidrenard",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-iv",
       "course_name_cn": "代数IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -851,9 +851,9 @@
       "sha256": "bc40759a7f8f4649d93ec210b705f565a24a9c3c9b4d8a4110c3cdcbcfc53666"
     },
     {
-      "id": "fra-algebra_2025-2026-2_quiz2_davidrenard",
+      "id": "fra-algebra-iv_2025-2026-2_quiz2_davidrenard",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-iv",
       "course_name_cn": "代数IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -864,9 +864,9 @@
       "sha256": "4e2539bcf036361da27ab889fc59c6fe036aee4cb6f0eadca2b7827d609e28d6"
     },
     {
-      "id": "fra-algebra_2025-2026-2_midterm_andrebelotto",
+      "id": "fra-algebra-iv_2025-2026-2_midterm_andrebelotto",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-iv",
       "course_name_cn": "代数IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -877,9 +877,9 @@
       "sha256": "275ebd188e92ab3b274e7e394b495a9f76c41aef255151c457ce67e683fa3d71"
     },
     {
-      "id": "fra-algebra_2025-2026-2_final_davidrenard",
+      "id": "fra-algebra-iv_2025-2026-2_final_davidrenard",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-iv",
       "course_name_cn": "代数IV",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -890,9 +890,9 @@
       "sha256": "c568fa99d51d983d241acc2c1784671fb6fccaff48f0a98ef4f030fb27336ccc"
     },
     {
-      "id": "fra-algebra_2024-2025-1_quiz1_xuejiangwei-wanghaowu",
+      "id": "fra-algebra-i_2024-2025-1_quiz1_xuejiangwei-wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-i",
       "course_name_cn": "代数I",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
@@ -903,9 +903,9 @@
       "sha256": "96b03291d2108b6a6353fb9dd23f078be4f883685a839597411bcd839115e161"
     },
     {
-      "id": "fra-algebra_2024-2025-1_midterm_xuejiangwei-wanghaowu",
+      "id": "fra-algebra-i_2024-2025-1_midterm_xuejiangwei-wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-i",
       "course_name_cn": "代数I",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
@@ -916,9 +916,9 @@
       "sha256": "f034fb6d0ab9864ebd20c4351b7ccb216522d363713e195ccc3c77c6a105fd07"
     },
     {
-      "id": "fra-algebra_2025-2026-1_quiz1_wanghaowu",
+      "id": "fra-algebra-i_2025-2026-1_quiz1_wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-i",
       "course_name_cn": "代数I",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",
@@ -929,9 +929,9 @@
       "sha256": "ee8937b0463aebf6a038c134500629343cb01d47dcc0ee7e32d4672f0858f902"
     },
     {
-      "id": "fra-algebra_2025-2026-1_final_wanghaowu",
+      "id": "fra-algebra-i_2025-2026-1_final_wanghaowu",
       "category_id": "07-zhongfa-class",
-      "course_slug": "fra-algebra",
+      "course_slug": "fra-algebra-i",
       "course_name_cn": "代数I",
       "course_level": "undergraduate",
       "academic_year": "2025-2026",

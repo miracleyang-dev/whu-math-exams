@@ -80,10 +80,16 @@
     },
     {
       "id": "07-zhongfa-class",
-      "name": "中法数学班",
+      "name": "中法班",
       "courses": [
-        { "slug": "fra-analysis",          "name": "分析" },
-        { "slug": "fra-algebra",           "name": "代数" },
+        { "slug": "fra-analysis-i",        "name": "分析I" },
+        { "slug": "fra-analysis-ii",       "name": "分析II" },
+        { "slug": "fra-analysis-iii",      "name": "分析III" },
+        { "slug": "fra-analysis-iv",       "name": "分析IV" },
+        { "slug": "fra-algebra-i",         "name": "代数I" },
+        { "slug": "fra-algebra-ii",        "name": "代数II" },
+        { "slug": "fra-algebra-iii",       "name": "代数III" },
+        { "slug": "fra-algebra-iv",        "name": "代数IV" },
         { "slug": "fra-discrete-prob-ode", "name": "离散概率论和常微分方程" }
       ]
     }

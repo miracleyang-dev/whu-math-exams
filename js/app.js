@@ -69,7 +69,7 @@ window.addEventListener('error', e => {
             <span class="year">${formatTimeLabel(e)}</span>
             <span class="meta"><span class="type">${labelType(e.exam_type)}</span>${e.teacher ? '任课：' + e.teacher : ''}</span>
             <span class="actions">
-              <button class="btn primary preview" type="button" data-path="${e.file_path}" data-title="${course.name} · ${formatTimeLabel(e)} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</button>
+              <a class="btn primary preview" href="${e.file_path}" data-path="${e.file_path}" data-title="${course.name} · ${formatTimeLabel(e)} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</a>
               <a class="btn" href="${e.file_path}" download>下载</a>
             </span>
           </div>
@@ -144,29 +144,20 @@ window.addEventListener('error', e => {
   });
 
   // ---- PDF viewer ----
-  const mobilePdfQuery = window.matchMedia('(max-width: 860px), (pointer: coarse)');
   document.addEventListener('click', ev => {
-    const a = ev.target.closest('.preview');
+    const a = ev.target.closest('a.preview');
     if (!a) return;
     ev.preventDefault();
     const filePath = a.dataset.path;
-    const fullUrl = new URL(filePath, document.baseURI).href;
+    const viewerUrl = filePath + '#toolbar=1&navpanes=0&view=FitH';
     const frame = document.getElementById('viewer-frame');
-    const mobilePanel = document.getElementById('viewer-mobile');
     document.getElementById('viewer-title').textContent = a.dataset.title;
     document.getElementById('viewer-download').href = filePath;
-    document.getElementById('viewer-online').href = fullUrl;
-    document.getElementById('viewer-mobile-open').href = fullUrl;
-    document.getElementById('viewer-mobile-download').href = filePath;
+    document.getElementById('viewer-online').href = viewerUrl;
     frame.src = '';
-    if (mobilePdfQuery.matches) {
-      frame.hidden = true;
-      mobilePanel.hidden = false;
-    } else {
-      mobilePanel.hidden = true;
-      frame.hidden = false;
-      requestAnimationFrame(() => { frame.src = filePath; });
-    }
+    requestAnimationFrame(() => {
+      frame.src = viewerUrl;
+    });
     document.getElementById('viewer-modal').hidden = false;
     document.body.style.overflow = 'hidden';
   });
@@ -175,8 +166,6 @@ window.addEventListener('error', e => {
   function closeViewer() {
     const frame = document.getElementById('viewer-frame');
     document.getElementById('viewer-modal').hidden = true;
-    document.getElementById('viewer-mobile').hidden = true;
-    frame.hidden = false;
     frame.src = '';
     document.body.style.overflow = '';
   }
