@@ -7,10 +7,11 @@
 ```
 whu-math-exams/
 ├── index.html                 # 网站单页入口
-├── css/style.css
-├── js/app.js                  # 列表渲染 + 嵌入式 PDF 预览
+├── style/
+│   ├── css/style.css
+│   └── js/app.js              # 列表渲染 + 嵌入式 PDF 预览（PC 用 iframe，移动端用 PDF.js）
 ├── data/
-│   ├── courses.json           # 6 大分类 + 课程清单
+│   ├── courses.json           # 7 大分类 + 课程清单
 │   └── exams.json             # 集中维护：所有试卷元数据
 ├── exams/                     # PDF 文件
 │   ├── 01-foundation/
@@ -18,7 +19,8 @@ whu-math-exams/
 │   ├── 03-algebra-numbertheory/
 │   ├── 04-geometry-topology/
 │   ├── 05-probability-statistics/
-│   └── 06-applied-computational/
+│   ├── 06-applied-computational/
+│   └── 07-zhongfa-class/
 └── README.md                  # 项目说明
 ```
 
@@ -30,6 +32,7 @@ whu-math-exams/
 4. 几何与拓扑
 5. 概率与统计
 6. 应用与计算数学
+7. 中法班
 
 ## 元数据字段（exams.json 每条记录）
 
@@ -42,8 +45,8 @@ whu-math-exams/
 | `course_level`  | ✅ | 当前固定 `undergraduate` |
 | `academic_year` | ⭕ | 如 `2023-2024`，未知则留空 |
 | `semester`      | ⭕ | `1` 或 `2`，未知则留空 |
-| `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` |
-| `teacher`       | ⭕ | 任课教师，公开展示 |
+| `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` / `quiz` |
+| `teacher`       | ⭕ | 任课教师，公开展示；多教师用 `&` 连接（如 `高付清&王冉`） |
 | `file_path`     | ✅ | 仓库内 PDF 相对路径 |
 | `sha256`        | ⭕ | 防重复 |
 
@@ -53,6 +56,7 @@ whu-math-exams/
 示例：`概率论_2023-2024-1_期末_张三.pdf`
 
 同课程 + 同学期 + 不同教师 → 用教师姓名区分。
+同一份试卷有多位授课教师时用 `&` 连接，例如：`代数学2_2025-2026-2_期末_汪春晖&涂玉平.pdf`。
 
 ## 部署（Railway · 静态）
 

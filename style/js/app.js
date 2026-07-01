@@ -162,7 +162,7 @@ window.addEventListener('error', e => {
       const pdf = await window.pdfjsLib.getDocument(filePath).promise;
       if (token !== pdfRenderToken) return;
       container.innerHTML = '';
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const dpr = window.devicePixelRatio || 1;
       const width = container.clientWidth - 16;
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
