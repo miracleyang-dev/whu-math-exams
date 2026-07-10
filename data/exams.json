@@ -2331,6 +2331,19 @@
       "teacher": "张晓平",
       "file_path": "exams/06-applied-computational/math-experiment/数学实验_2025-2026-2_期末_张晓平.pdf",
       "sha256": "f6fc38387c368d03c6a179ff1ca9b73c58ead153cb04e8116290aee8691d790e"
+    },
+    {
+      "id": "complex-analysis_期末考试题汇总_tuzhenhan",
+      "category_id": "02-analysis-pde",
+      "course_slug": "complex-analysis",
+      "course_name_cn": "复变函数",
+      "course_level": "undergraduate",
+      "academic_year": "",
+      "semester": "",
+      "exam_type": "mock",
+      "teacher": "涂振汉",
+      "file_path": "exams/02-analysis-pde/complex-analysis/复变函数_期末考试题汇总_涂振汉.pdf",
+      "sha256": "dda7d57f69f852c0037838a45099d79e41bf68de564c6e2a6ed91f3a879c5616"
     }
   ]
 }
