@@ -97,7 +97,7 @@ window.addEventListener('error', e => {
   }
 
   function labelType(t) {
-    return ({ final: '期末', midterm: '期中', makeup: '补考', mock: '模拟', quiz: '小测' })[t] || t;
+    return ({ final: '期末', midterm: '期中', mock: '模拟', quiz: '小测' })[t] || t;
   }
 
   function formatTimeLabel(e) {

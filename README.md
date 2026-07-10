@@ -45,8 +45,10 @@ whu-math-exams/
 | `course_level`  | ✅ | 当前固定 `undergraduate` |
 | `academic_year` | ⭕ | 如 `2023-2024`，未知则留空 |
 | `semester`      | ⭕ | `1` 或 `2`，未知则留空 |
-| `exam_type`     | ✅ | `final` / `midterm` / `makeup` / `mock` / `quiz` |
+| `exam_type`     | ✅ | `final` / `midterm` / `mock` / `quiz` |
 | `teacher`       | ⭕ | 任课教师，公开展示；多教师用 `&` 连接（如 `高付清&王冉`） |
+
+说明：复习题、模拟题在元数据中统一使用 `mock`。
 | `file_path`     | ✅ | 仓库内 PDF 相对路径 |
 | `sha256`        | ⭕ | 防重复 |
 
