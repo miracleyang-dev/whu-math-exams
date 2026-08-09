@@ -285,6 +285,11 @@ a:hover { color: var(--crimson-deep); }
   display: block; margin: 0 auto .5rem; max-width: 100%; height: auto;
   box-shadow: 0 2px 8px rgba(0,0,0,.3); background: #fff;
 }
+#viewer-pdfjs .pdfjs-page {
+  width: 100%; min-height: 10rem; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto .5rem; color: rgba(255,255,255,.65); font-size: .8rem;
+}
+#viewer-pdfjs .pdfjs-page.is-rendered { min-height: 0; }
 #viewer-pdfjs .pdfjs-loading, #viewer-pdfjs .pdfjs-error {
   color: #fff; text-align: center; padding: 2rem 1rem; font-size: .9rem;
 }

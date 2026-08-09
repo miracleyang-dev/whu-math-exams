@@ -73,7 +73,7 @@ window.addEventListener('error', e => {
               <a class="btn" href="${e.file_path}" download>下载</a>
             </span>
           </div>
-        `).join('') : `<div class="empty">暂无试卷，欢迎贡献</div>`;
+        `).join('') : `<div class="empty">暂无试卷</div>`;
         return `
           <div class="course-block" id="${cat.id}-${course.slug}">
             <h3>${course.name}${exs.length ? `<span class="tag">${exs.length} 份</span>` : ''}</h3>
@@ -159,25 +159,60 @@ window.addEventListener('error', e => {
       return;
     }
     try {
-      const pdf = await window.pdfjsLib.getDocument(filePath).promise;
+      const pdf = await window.pdfjsLib.getDocument({
+        url: filePath,
+        disableStream: false,
+        disableAutoFetch: false,
+        isEvalSupported: false
+      }).promise;
       if (token !== pdfRenderToken) return;
       container.innerHTML = '';
-      const dpr = window.devicePixelRatio || 1;
-      const width = container.clientWidth - 16;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const width = Math.max(container.clientWidth - 16, 240);
+      const pages = [];
+      const renderPage = async (entry) => {
+        if (entry.rendered || entry.rendering || token !== pdfRenderToken) return;
+        entry.rendering = true;
+        try {
+          const page = await pdf.getPage(entry.index);
+          if (token !== pdfRenderToken) return;
+          const viewport = page.getViewport({ scale: 1 });
+          const scale = width / viewport.width;
+          const scaled = page.getViewport({ scale: scale * dpr });
+          const canvas = document.createElement('canvas');
+          canvas.width = Math.ceil(scaled.width);
+          canvas.height = Math.ceil(scaled.height);
+          canvas.style.width = (scaled.width / dpr) + 'px';
+          canvas.style.height = (scaled.height / dpr) + 'px';
+          entry.host.replaceChildren(canvas);
+          await page.render({ canvasContext: canvas.getContext('2d', { alpha: false }), viewport: scaled }).promise;
+          entry.host.classList.add('is-rendered');
+          entry.rendered = true;
+        } finally {
+          entry.rendering = false;
+        }
+      };
       for (let i = 1; i <= pdf.numPages; i++) {
-        const page = await pdf.getPage(i);
-        if (token !== pdfRenderToken) return;
-        const viewport = page.getViewport({ scale: 1 });
-        const scale = width / viewport.width;
-        const scaled = page.getViewport({ scale: scale * dpr });
-        const canvas = document.createElement('canvas');
-        canvas.width = scaled.width;
-        canvas.height = scaled.height;
-        canvas.style.width = (scaled.width / dpr) + 'px';
-        canvas.style.height = (scaled.height / dpr) + 'px';
-        container.appendChild(canvas);
-        await page.render({ canvasContext: canvas.getContext('2d'), viewport: scaled }).promise;
+        const host = document.createElement('div');
+        host.className = 'pdfjs-page';
+        host.textContent = `第 ${i} 页`;
+        container.appendChild(host);
+        pages.push({ index: i, host, rendered: false, rendering: false });
       }
+      if (window.IntersectionObserver) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const page = pages.find(item => item.host === entry.target);
+              if (page) renderPage(page).catch(() => {});
+            }
+          });
+        }, { root: container, rootMargin: '800px 0px' });
+        pages.forEach(page => observer.observe(page.host));
+      } else {
+        for (const page of pages.slice(1)) await renderPage(page);
+      }
+      if (pages[0]) await renderPage(pages[0]);
     } catch (err) {
       if (token !== pdfRenderToken) return;
       container.innerHTML = `<div class="pdfjs-error">预览失败：${err.message}<br>可点击"下载"或"在线预览"</div>`;

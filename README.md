@@ -86,6 +86,19 @@ Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。
 3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
 4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
 
+## Git LFS
+
+仓库中的 PDF 由 Git LFS 管理。首次克隆需要安装 Git LFS，并执行：
+
+```bash
+git lfs install
+git lfs pull
+```
+
+新增或替换 PDF 后，正常执行 `git add` 和 `git commit` 即可；`.gitattributes` 会自动将 `*.pdf` 作为 LFS 对象处理。若本地只看到很小的指针文件，说明还需要运行 `git lfs pull`。
+
+部署时也必须让构建平台拉取 LFS 对象；Caddy 不能直接提供 LFS 指针文件。部署日志若显示 PDF 只有约 130 字节，请检查平台的 LFS checkout 设置。
+
 ## License / 使用说明
 
 - 本仓库资料仅供学习参考，无法保证内容完全无错误；使用前请自行核对。

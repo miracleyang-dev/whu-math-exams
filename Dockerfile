@@ -1,4 +1,4 @@
-# Railway 部署用 Dockerfile：静态 Caddy 站点，不再依赖 Git LFS。
+# Railway deployment: the checkout/build context must contain smudged Git LFS objects.
 
 FROM caddy:2-alpine
 
