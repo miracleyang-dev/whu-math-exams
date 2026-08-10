@@ -838,6 +838,19 @@
       "sha256": "f3c91b81d188399b4c141febd0233a5a9a25ce2cf423457f1f61e328b16351ff"
     },
     {
+      "id": "fra-algebra-ii_2024-2025-2_quiz_linxingjun-xuejiangwei",
+      "category_id": "07-zhongfa-class",
+      "course_slug": "fra-algebra-ii",
+      "course_name_cn": "代数II",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "quiz",
+      "teacher": "林兴君&薛江维",
+      "file_path": "exams/07-zhongfa-class/fra-algebra/代数II_2024-2025-2_小测_林兴君&薛江维.pdf",
+      "sha256": "9964956e39f25272ca3414a56afad4d3f2e1e2d0810e950c03036889cb57893a"
+    },
+    {
       "id": "fra-algebra-ii_2024-2025-2_midterm_xuejiangwei-linxingjun",
       "category_id": "07-zhongfa-class",
       "course_slug": "fra-algebra-ii",
@@ -1485,7 +1498,7 @@
       "exam_type": "final",
       "teacher": "罗壮初",
       "file_path": "exams/02-analysis-pde/ode/常微分方程_2019-2020-2_期末_罗壮初.pdf",
-      "sha256": "28bfd2aedf77f5deef53898e8d8bc24fcd974ecdc29d2588b44b32461eb062c3"
+      "sha256": "7e9686112afbdf3e2b0c17d368e6ac9e3ec7faacbe474f53238a7f9abf1714c9"
     },
     {
       "id": "ode_2020-2021-2_final_luozhuangchu",
@@ -1719,7 +1732,7 @@
       "exam_type": "final",
       "teacher": "未知",
       "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2016-2017-1_期末_未知.pdf",
-      "sha256": "9e4ae8f7effe6fb42d1b9c156035a9304cbd980b1218ff66b32c7cb71fa5ae21"
+      "sha256": "7b6b0e81bfd7cb11544bead0c0e23136ab79d7414e4f1db6ca9e299f8d7762b5"
     },
     {
       "id": "advanced-algebra-geo_2016-2017-2_final_unknown",
@@ -1735,6 +1748,19 @@
       "sha256": "50db4eb3c0a321a954c493af025f90530035ca999aa08c8750446f51ff1d5b43"
     },
     {
+      "id": "advanced-algebra-geo_2017-2018-1_final_unknown",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo",
+      "course_name_cn": "高等代数与解析几何",
+      "course_level": "undergraduate",
+      "academic_year": "2017-2018",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "未知",
+      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2017-2018-1_期末_未知.pdf",
+      "sha256": "e7d240ca381ea7236099d4081ab504542036d9749e27d1815f383a6ae6055490"
+    },
+    {
       "id": "advanced-algebra-geo_2017-2018-2_final_unknown",
       "category_id": "01-foundation",
       "course_slug": "advanced-algebra-geo",
@@ -1746,6 +1772,19 @@
       "teacher": "未知",
       "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2017-2018-2_期末_未知.pdf",
       "sha256": "a7638b28429ba2ddf221cbd732886e167dc62b65a47df76debfee9722dfaa494"
+    },
+    {
+      "id": "advanced-algebra-geo_2018-2019-1_final_unknown",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo",
+      "course_name_cn": "高等代数与解析几何",
+      "course_level": "undergraduate",
+      "academic_year": "2018-2019",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "未知",
+      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2018-2019-1_期末_未知.pdf",
+      "sha256": "248d67f9f51ba3e07beebe6bbeed4853944437a9a022cfb8fd99ab8f90ef8b2c"
     },
     {
       "id": "advanced-algebra-geo_2018-2019-2_final_unknown",
@@ -1761,6 +1800,19 @@
       "sha256": "58ad9de915e0a69b50318782c9078c1c716c5b24c46fcc29c1a42dd709cdf264"
     },
     {
+      "id": "advanced-algebra-geo_2019-2020-1_final_unknown",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo",
+      "course_name_cn": "高等代数与解析几何",
+      "course_level": "undergraduate",
+      "academic_year": "2019-2020",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "未知",
+      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2019-2020-1_期末_未知.pdf",
+      "sha256": "ea8ee5f850132e3ead753f858aa869cca2e005c4462e8ec89bbf776cc3f264b0"
+    },
+    {
       "id": "advanced-algebra-geo_2019-2020-2_final_unknown",
       "category_id": "01-foundation",
       "course_slug": "advanced-algebra-geo",
@@ -1772,6 +1824,19 @@
       "teacher": "未知",
       "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2019-2020-2_期末_未知.pdf",
       "sha256": "9a23737767a04c97e882c64e4cfd73de25065fab6f029b2aa2faf4f38b987b2a"
+    },
+    {
+      "id": "advanced-algebra-geo_2020-2021-1_final_unknown",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo",
+      "course_name_cn": "高等代数与解析几何",
+      "course_level": "undergraduate",
+      "academic_year": "2020-2021",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "未知",
+      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2020-2021-1_期末_未知.pdf",
+      "sha256": "12bb73314b74e5eb0ed07fb6bb6b94d387db1012b7ea214e43299e3d1d0701eb"
     },
     {
       "id": "advanced-algebra-geo_2020-2021-2_final_unknown",
