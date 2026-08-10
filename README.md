@@ -111,5 +111,5 @@ git lfs pull
 以下为贡献名单，与顺序无关。
 
 - 23级：杨永豪（[@miracleyang-dev](https://github.com/miracleyang-dev)）、黄治恺、张浩林、丁铭续、邱航
-- 24级：伍卓恒、袁凡高、杨淳凯、匡宇萱
+- 24级：伍卓恒（[@HenryWu0728](https://github.com/HenryWu0728)）、袁凡高、杨淳凯、匡宇萱
 - 25级：周政（[@07-0920](https://github.com/07-0920)）
