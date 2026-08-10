@@ -110,6 +110,6 @@ git lfs pull
 
 以下为贡献名单，与顺序无关。
 
-- 23级：杨永豪（[@miracleyang-dev](https://github.com/miracleyang-dev)）、黄治恺（[@ZhikHuang](https://github.com/ZhikHuang)）、张浩林、丁铭续、邱航
+- 23级：杨永豪（[@miracleyang-dev](https://github.com/miracleyang-dev)）、黄治恺（[@ZhikHuang](https://github.com/ZhikHuang)）、张浩林、丁铭续、邱航（[@gaoshuuu](https://github.com/gaoshuuu)）
 - 24级：伍卓恒（[@HenryWu0728](https://github.com/HenryWu0728)）、袁凡高、杨淳凯（[@yan-gck](https://github.com/yan-gck)）、匡宇萱
 - 25级：周政（[@07-0920](https://github.com/07-0920)）
