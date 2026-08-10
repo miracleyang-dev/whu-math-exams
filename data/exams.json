@@ -1579,6 +1579,32 @@
       "sha256": "8b4723a529e10bac99dc646f46c46177e677cf241eb68c3bc4ef81d3c324932a"
     },
     {
+      "id": "pde_2025-2026-1_quiz_liweixi",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2025-2026",
+      "semester": "1",
+      "exam_type": "quiz",
+      "teacher": "李维喜",
+      "file_path": "exams/02-analysis-pde/pde/偏微分方程_2025-2026-1_小测_李维喜.pdf",
+      "sha256": "a98fbfb641abf901f6d8ec5df387fb43663afb28b8af31305c70e0daca34a664"
+    },
+    {
+      "id": "pde_2025-2026-2_final_zhangxiongtao",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2025-2026",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "张雄韬",
+      "file_path": "exams/02-analysis-pde/pde/偏微分方程_2025-2026-2_期末_张雄韬.pdf",
+      "sha256": "3c7ec607a21d5f3e6eda58d174af6ca9375d538d00913a973dc119f9de025ce2"
+    },
+    {
       "id": "real-analysis_2021-2022-2_final_qiuyanqi",
       "category_id": "02-analysis-pde",
       "course_slug": "real-analysis",
