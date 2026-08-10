@@ -99,6 +99,8 @@ git lfs pull
 
 部署时也必须让构建平台拉取 LFS 对象；Caddy 不能直接提供 LFS 指针文件。部署日志若显示 PDF 只有约 130 字节，请检查平台的 LFS checkout 设置。
 
+Railway 的 GitHub 部署可能只把 LFS 指针文件放入 Docker 构建上下文。当前 `Dockerfile` 会在构建阶段从 GitHub 拉取同一提交的 LFS PDF，并在最终镜像中覆盖 `exams/`。如果构建日志出现 `PDF was not hydrated from Git LFS`，说明构建环境没有拿到真实 PDF 对象，需要检查 GitHub LFS 对象是否已上传，或改用本地执行 `git lfs pull` 后通过 Railway CLI 上传部署。
+
 ## License / 使用说明
 
 - 本仓库资料仅供学习参考，无法保证内容完全无错误；使用前请自行核对。

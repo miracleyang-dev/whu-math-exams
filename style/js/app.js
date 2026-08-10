@@ -150,9 +150,39 @@ window.addEventListener('error', e => {
       'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js';
   }
   let pdfRenderToken = 0;
-  async function renderPdfMobile(filePath) {
+
+  function setViewerMessage(className, message) {
+    const frame = document.getElementById('viewer-frame');
     const container = document.getElementById('viewer-pdfjs');
-    const token = ++pdfRenderToken;
+    const node = document.createElement('div');
+    node.className = className;
+    node.textContent = message;
+    frame.hidden = true;
+    frame.src = '';
+    container.hidden = false;
+    container.replaceChildren(node);
+  }
+
+  async function assertPdfResponse(filePath) {
+    const response = await fetch(filePath, {
+      headers: { Range: 'bytes=0-255' },
+      cache: 'no-store'
+    });
+    if (!response.ok) throw new Error(`PDF 请求失败（HTTP ${response.status}）`);
+
+    const buffer = await response.arrayBuffer();
+    const bytes = new Uint8Array(buffer.slice(0, 256));
+    const prefix = new TextDecoder('utf-8').decode(bytes);
+    if (prefix.startsWith('version https://git-lfs.github.com/spec/v1')) {
+      throw new Error('部署环境返回的是 Git LFS 指针文件，不是真实 PDF');
+    }
+    if (!prefix.startsWith('%PDF-')) {
+      throw new Error('服务器返回的不是 PDF 文件');
+    }
+  }
+
+  async function renderPdfMobile(filePath, token) {
+    const container = document.getElementById('viewer-pdfjs');
     container.innerHTML = '<div class="pdfjs-loading">加载中…</div>';
     if (!window.pdfjsLib) {
       container.innerHTML = '<div class="pdfjs-error">PDF.js 加载失败，请检查网络后重试</div>';
@@ -215,10 +245,10 @@ window.addEventListener('error', e => {
       if (pages[0]) await renderPage(pages[0]);
     } catch (err) {
       if (token !== pdfRenderToken) return;
-      container.innerHTML = `<div class="pdfjs-error">预览失败：${err.message}<br>可点击"下载"或"在线预览"</div>`;
+      setViewerMessage('pdfjs-error', `预览失败：${err.message}。可点击下载或在线预览。`);
     }
   }
-  document.addEventListener('click', ev => {
+  document.addEventListener('click', async ev => {
     const a = ev.target.closest('a.preview');
     if (!a) return;
     ev.preventDefault();
@@ -226,15 +256,27 @@ window.addEventListener('error', e => {
     const viewerUrl = filePath + '#toolbar=1&navpanes=0&view=FitH';
     const frame = document.getElementById('viewer-frame');
     const pdfjsBox = document.getElementById('viewer-pdfjs');
+    const token = ++pdfRenderToken;
     document.getElementById('viewer-title').textContent = a.dataset.title;
     document.getElementById('viewer-download').href = filePath;
     document.getElementById('viewer-online').href = viewerUrl;
     document.getElementById('viewer-modal').hidden = false;
     document.body.style.overflow = 'hidden';
+    setViewerMessage('pdfjs-loading', '加载中…');
+
+    try {
+      await assertPdfResponse(filePath);
+    } catch (err) {
+      if (token !== pdfRenderToken) return;
+      setViewerMessage('pdfjs-error', `预览失败：${err.message}。可点击下载或在线预览。`);
+      return;
+    }
+    if (token !== pdfRenderToken) return;
+
     if (pdfjsMobileQuery.matches) {
       frame.hidden = true; frame.src = '';
       pdfjsBox.hidden = false;
-      renderPdfMobile(filePath);
+      renderPdfMobile(filePath, token);
     } else {
       pdfjsBox.hidden = true; pdfjsBox.innerHTML = '';
       frame.hidden = false; frame.src = '';
