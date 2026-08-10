@@ -2,6 +2,8 @@
 
 开源静态站，集中归档武大数统院**本科**历年试卷。
 
+在线访问：[whu-math-exams-production.up.railway.app](https://whu-math-exams-production.up.railway.app)
+
 ## 目录结构
 
 ```
@@ -87,18 +89,14 @@ Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。
 
 ## Git LFS
 
-仓库中的 PDF 由 Git LFS 管理。首次克隆需要安装 Git LFS，并执行：
+仓库中的 PDF 由 Git LFS 管理。首次克隆后执行：
 
 ```bash
 git lfs install
 git lfs pull
 ```
 
-新增或替换 PDF 后，正常执行 `git add` 和 `git commit` 即可；`.gitattributes` 会自动将 `*.pdf` 作为 LFS 对象处理。若本地只看到很小的指针文件，说明还需要运行 `git lfs pull`。
-
-部署时也必须让构建平台拉取 LFS 对象；Caddy 不能直接提供 LFS 指针文件。部署日志若显示 PDF 只有约 130 字节，请检查平台的 LFS checkout 设置。
-
-Railway 的 GitHub 部署可能只把 LFS 指针文件放入 Docker 构建上下文。当前 `Dockerfile` 会在构建阶段从 GitHub 拉取同一提交的 LFS PDF，并在最终镜像中覆盖 `exams/`。如果构建日志出现 `PDF was not hydrated from Git LFS`，说明构建环境没有拿到真实 PDF 对象，需要检查 GitHub LFS 对象是否已上传，或改用本地执行 `git lfs pull` 后通过 Railway CLI 上传部署。
+新增或替换 PDF 后正常 `git add` / `git commit` 即可，`.gitattributes` 会自动将 `*.pdf` 交给 LFS 处理。若 PDF 只有约 130 字节，说明拿到的是指针文件，需要执行 `git lfs pull`。部署时 `Dockerfile` 会在构建阶段自动拉取真实的 LFS PDF。
 
 ## License / 使用说明
 
