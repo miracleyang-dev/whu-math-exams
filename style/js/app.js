@@ -1,7 +1,15 @@
 // 静态站：读取 courses.json + exams.json，渲染分类+列表，搜索 & 嵌入式 PDF 预览
+function replaceWithMessage(target, className, message) {
+  const node = document.createElement('div');
+  node.className = className;
+  node.textContent = message;
+  target.replaceChildren(node);
+}
+
 window.addEventListener('error', e => {
+  if (e.target && e.target !== window) return;
   const list = document.getElementById('exam-list');
-  if (list) list.innerHTML = `<div class="error">JS 错误: ${e.message}\n${e.filename}:${e.lineno}</div>`;
+  if (list) replaceWithMessage(list, 'error', `JS 错误: ${e.message}\n${e.filename}:${e.lineno}`);
 });
 
 (async () => {
@@ -18,10 +26,10 @@ window.addEventListener('error', e => {
     if (!cR.ok) throw new Error('courses.json HTTP ' + cR.status);
     if (!eR.ok) throw new Error('exams.json HTTP ' + eR.status);
     courses = await cR.json();
-    exams   = await eR.json();
+    exams = await eR.json();
   } catch (err) {
-    nav.innerHTML = '';
-    list.innerHTML = `<div class="error">加载失败：${err.message}\n请确认 data/courses.json 与 data/exams.json 可访问。</div>`;
+    nav.replaceChildren();
+    replaceWithMessage(list, 'error', `加载失败：${err.message}\n请确认 data/courses.json 与 data/exams.json 可访问。`);
     console.error('[app.js] load failed', err);
     return;
   }
@@ -37,63 +45,162 @@ window.addEventListener('error', e => {
 
   // ---- Sidebar ----
   function buildSidebar() {
-    nav.innerHTML = '';
+    nav.replaceChildren();
     categories.forEach(cat => {
       const examsInCat = allExams.filter(e => e.category_id === cat.id).length;
       const grp = document.createElement('div');
       grp.className = 'cat-group';
-      grp.innerHTML = `
-        <div class="cat-title">${cat.name}<span class="count">${examsInCat}</span></div>
-      ` + cat.courses.map(c => {
-        const cnt = allExams.filter(e => e.course_slug === c.slug).length;
-        return `<a href="#${cat.id}-${c.slug}" class="${cnt ? 'has-exam' : ''}">
-          <span>${c.name}</span>${cnt ? `<span class="badge">${cnt}</span>` : ''}
-        </a>`;
-      }).join('');
-      nav.appendChild(grp);
+
+      const title = document.createElement('div');
+      title.className = 'cat-title';
+      title.append(document.createTextNode(cat.name));
+
+      const count = document.createElement('span');
+      count.className = 'count';
+      count.textContent = examsInCat;
+      title.append(count);
+      grp.append(title);
+
+      cat.courses.forEach(course => {
+        const cnt = allExams.filter(e => e.course_slug === course.slug).length;
+        const link = document.createElement('a');
+        link.href = `#${cat.id}-${course.slug}`;
+        if (cnt) link.className = 'has-exam';
+
+        const name = document.createElement('span');
+        name.textContent = course.name;
+        link.append(name);
+
+        if (cnt) {
+          const badge = document.createElement('span');
+          badge.className = 'badge';
+          badge.textContent = cnt;
+          link.append(badge);
+        }
+
+        grp.append(link);
+      });
+
+      nav.append(grp);
     });
   }
 
   // ---- Main list ----
   function render(filterFn) {
-    list.innerHTML = '';
+    list.replaceChildren();
+
     categories.forEach((cat, idx) => {
-      const courseBlocks = cat.courses.map(course => {
+      const sec = document.createElement('section');
+      sec.className = 'cat-section';
+      sec.id = cat.id;
+
+      const heading = document.createElement('h2');
+      const index = document.createElement('span');
+      index.className = 'index';
+      index.textContent = `0${idx + 1}`;
+      heading.append(index, document.createTextNode(cat.name));
+      sec.append(heading);
+
+      let hasCourseBlocks = false;
+      cat.courses.forEach(course => {
         const exs = allExams
           .filter(e => e.course_slug === course.slug)
           .filter(filterFn || (() => true))
           .sort((a, b) => ((b.academic_year || '') + (b.semester || '')).localeCompare((a.academic_year || '') + (a.semester || '')));
-        if (!exs.length && filterFn) return '';
-        const rows = exs.length ? exs.map(e => `
-          <div class="exam-row">
-            <span class="year">${formatTimeLabel(e)}</span>
-            <span class="meta"><span class="type">${labelType(e.exam_type)}</span>${e.teacher ? '任课：' + e.teacher : ''}</span>
-            <span class="actions">
-              <a class="btn primary preview" href="${e.file_path}" data-path="${e.file_path}" data-title="${course.name} · ${formatTimeLabel(e)} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}">预览</a>
-              <a class="btn" href="${e.file_path}" download>下载</a>
-            </span>
-          </div>
-        `).join('') : `<div class="empty">暂无试卷</div>`;
-        return `
-          <div class="course-block" id="${cat.id}-${course.slug}">
-            <h3>${course.name}${exs.length ? `<span class="tag">${exs.length} 份</span>` : ''}</h3>
-            ${rows}
-          </div>
-        `;
-      }).filter(Boolean).join('');
-      if (!courseBlocks) return;
+        if (!exs.length && filterFn) return;
+
+        sec.append(createCourseBlock(cat, course, exs));
+        hasCourseBlocks = true;
+      });
+
+      if (hasCourseBlocks) list.append(sec);
+    });
+
+    if (!list.children.length) {
       const sec = document.createElement('section');
       sec.className = 'cat-section';
-      sec.id = cat.id;
-      sec.innerHTML = `
-        <h2><span class="index">0${idx + 1}</span>${cat.name}</h2>
-        ${courseBlocks}
-      `;
-      list.appendChild(sec);
-    });
-    if (!list.children.length) {
-      list.innerHTML = `<div class="cat-section"><div class="empty">未找到匹配结果</div></div>`;
+      replaceWithMessage(sec, 'empty', '未找到匹配结果');
+      list.append(sec);
     }
+  }
+
+  function createCourseBlock(cat, course, exs) {
+    const block = document.createElement('div');
+    block.className = 'course-block';
+    block.id = `${cat.id}-${course.slug}`;
+
+    const title = document.createElement('h3');
+    title.append(document.createTextNode(course.name));
+    if (exs.length) {
+      const tag = document.createElement('span');
+      tag.className = 'tag';
+      tag.textContent = `${exs.length} 份`;
+      title.append(tag);
+    }
+    block.append(title);
+
+    if (!exs.length) {
+      replaceWithMessage(block, 'empty', '暂无试卷');
+      block.prepend(title);
+      return block;
+    }
+
+    exs.forEach(e => block.append(createExamRow(e, course)));
+    return block;
+  }
+
+  function createExamRow(e, course) {
+    const row = document.createElement('div');
+    row.className = 'exam-row';
+
+    const year = document.createElement('span');
+    year.className = 'year';
+    year.textContent = formatTimeLabel(e);
+
+    const meta = document.createElement('span');
+    meta.className = 'meta';
+    const type = document.createElement('span');
+    type.className = 'type';
+    type.textContent = labelType(e.exam_type);
+    meta.append(type);
+    if (e.teacher) meta.append(document.createTextNode('任课：' + e.teacher));
+
+    const actions = document.createElement('span');
+    actions.className = 'actions';
+    const filePath = safePdfPath(e.file_path);
+
+    if (filePath) {
+      const preview = document.createElement('a');
+      preview.className = 'btn primary preview';
+      preview.href = filePath;
+      preview.dataset.path = filePath;
+      preview.dataset.title = `${course.name} · ${formatTimeLabel(e)} · ${labelType(e.exam_type)}${e.teacher ? ' · ' + e.teacher : ''}`;
+      preview.textContent = '预览';
+
+      const download = document.createElement('a');
+      download.className = 'btn';
+      download.href = filePath;
+      download.download = '';
+      download.textContent = '下载';
+
+      actions.append(preview, download);
+    } else {
+      const error = document.createElement('span');
+      error.className = 'path-error';
+      error.textContent = '路径无效';
+      actions.append(error);
+    }
+
+    row.append(year, meta, actions);
+    return row;
+  }
+
+  function safePdfPath(filePath) {
+    const value = String(filePath || '');
+    if (!value.startsWith('exams/')) return '';
+    if (!value.toLowerCase().endsWith('.pdf')) return '';
+    if (value.startsWith('//') || value.includes('://')) return '';
+    return value;
   }
 
   function labelType(t) {
@@ -131,36 +238,87 @@ window.addEventListener('error', e => {
       if (!q) return render();
       const courseMatch = new Set(
         categories.flatMap(c => c.courses)
-          .filter(c => c.name.toLowerCase().includes(q) || c.slug.includes(q))
+          .filter(c => String(c.name || '').toLowerCase().includes(q) || String(c.slug || '').includes(q))
           .map(c => c.slug)
       );
       render(e =>
         courseMatch.has(e.course_slug) ||
         (e.teacher || '').toLowerCase().includes(q) ||
         (e.academic_year || '').includes(q) ||
-        (e.semester || '').includes(q)
+        String(e.semester || '').includes(q)
       );
     }, 120);
   });
 
   // ---- PDF viewer ----
   const pdfjsMobileQuery = window.matchMedia('(max-width: 860px)');
-  if (window.pdfjsLib) {
-    window.pdfjsLib.GlobalWorkerOptions.workerSrc =
-      'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js';
-  }
+  const pdfjsCandidates = [
+    {
+      script: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.min.js',
+      worker: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js'
+    },
+    {
+      script: 'https://unpkg.com/pdfjs-dist@3.11.174/legacy/build/pdf.min.js',
+      worker: 'https://unpkg.com/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js'
+    },
+    {
+      script: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',
+      worker: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'
+    }
+  ];
   let pdfRenderToken = 0;
+  let pdfjsLoadPromise;
+
+  function loadScript(src) {
+    return new Promise((resolve, reject) => {
+      const script = document.createElement('script');
+      script.src = src;
+      script.async = true;
+      script.onload = resolve;
+      script.onerror = () => reject(new Error(`PDF.js 加载失败：${src}`));
+      document.head.append(script);
+    });
+  }
+
+  async function ensurePdfjsLoaded() {
+    if (window.pdfjsLib) {
+      if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
+        window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsCandidates[0].worker;
+      }
+      return window.pdfjsLib;
+    }
+    if (pdfjsLoadPromise) return pdfjsLoadPromise;
+
+    pdfjsLoadPromise = (async () => {
+      const errors = [];
+      for (const candidate of pdfjsCandidates) {
+        try {
+          await loadScript(candidate.script);
+          if (window.pdfjsLib) {
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = candidate.worker;
+            return window.pdfjsLib;
+          }
+          errors.push(candidate.script);
+        } catch (err) {
+          errors.push(err.message);
+        }
+      }
+      throw new Error(`PDF.js 加载失败，请检查网络后重试。已尝试 ${errors.length} 个来源。`);
+    })().catch(err => {
+      pdfjsLoadPromise = null;
+      throw err;
+    });
+
+    return pdfjsLoadPromise;
+  }
 
   function setViewerMessage(className, message) {
     const frame = document.getElementById('viewer-frame');
     const container = document.getElementById('viewer-pdfjs');
-    const node = document.createElement('div');
-    node.className = className;
-    node.textContent = message;
     frame.hidden = true;
     frame.src = '';
     container.hidden = false;
-    container.replaceChildren(node);
+    replaceWithMessage(container, className, message);
   }
 
   async function assertPdfResponse(filePath) {
@@ -183,23 +341,23 @@ window.addEventListener('error', e => {
 
   async function renderPdfMobile(filePath, token) {
     const container = document.getElementById('viewer-pdfjs');
-    container.innerHTML = '<div class="pdfjs-loading">加载中…</div>';
-    if (!window.pdfjsLib) {
-      container.innerHTML = '<div class="pdfjs-error">PDF.js 加载失败，请检查网络后重试</div>';
-      return;
-    }
+    replaceWithMessage(container, 'pdfjs-loading', '加载中…');
     try {
-      const pdf = await window.pdfjsLib.getDocument({
+      const pdfjs = await ensurePdfjsLoaded();
+      if (token !== pdfRenderToken) return;
+      const pdf = await pdfjs.getDocument({
         url: filePath,
         disableStream: false,
         disableAutoFetch: false,
         isEvalSupported: false
       }).promise;
       if (token !== pdfRenderToken) return;
-      container.innerHTML = '';
+
+      container.replaceChildren();
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
       const width = Math.max(container.clientWidth - 16, 240);
       const pages = [];
+
       const renderPage = async (entry) => {
         if (entry.rendered || entry.rendering || token !== pdfRenderToken) return;
         entry.rendering = true;
@@ -222,13 +380,15 @@ window.addEventListener('error', e => {
           entry.rendering = false;
         }
       };
+
       for (let i = 1; i <= pdf.numPages; i++) {
         const host = document.createElement('div');
         host.className = 'pdfjs-page';
         host.textContent = `第 ${i} 页`;
-        container.appendChild(host);
+        container.append(host);
         pages.push({ index: i, host, rendered: false, rendering: false });
       }
+
       if (window.IntersectionObserver) {
         const observer = new IntersectionObserver(entries => {
           entries.forEach(entry => {
@@ -240,7 +400,7 @@ window.addEventListener('error', e => {
         }, { root: container, rootMargin: '800px 0px' });
         pages.forEach(page => observer.observe(page.host));
       } else {
-        for (const page of pages.slice(1)) await renderPage(page);
+        for (const page of pages) await renderPage(page);
       }
       if (pages[0]) await renderPage(pages[0]);
     } catch (err) {
@@ -248,11 +408,13 @@ window.addEventListener('error', e => {
       setViewerMessage('pdfjs-error', `预览失败：${err.message}。可点击下载或在线预览。`);
     }
   }
+
   document.addEventListener('click', async ev => {
     const a = ev.target.closest('a.preview');
     if (!a) return;
     ev.preventDefault();
-    const filePath = a.dataset.path;
+    const filePath = safePdfPath(a.dataset.path);
+    if (!filePath) return;
     const viewerUrl = filePath + '#toolbar=1&navpanes=0&view=FitH';
     const frame = document.getElementById('viewer-frame');
     const pdfjsBox = document.getElementById('viewer-pdfjs');
@@ -274,12 +436,15 @@ window.addEventListener('error', e => {
     if (token !== pdfRenderToken) return;
 
     if (pdfjsMobileQuery.matches) {
-      frame.hidden = true; frame.src = '';
+      frame.hidden = true;
+      frame.src = '';
       pdfjsBox.hidden = false;
       renderPdfMobile(filePath, token);
     } else {
-      pdfjsBox.hidden = true; pdfjsBox.innerHTML = '';
-      frame.hidden = false; frame.src = '';
+      pdfjsBox.hidden = true;
+      pdfjsBox.replaceChildren();
+      frame.hidden = false;
+      frame.src = '';
       requestAnimationFrame(() => { frame.src = viewerUrl; });
     }
   });
@@ -291,7 +456,7 @@ window.addEventListener('error', e => {
     document.getElementById('viewer-modal').hidden = true;
     pdfRenderToken++;
     frame.src = '';
-    pdfjsBox.innerHTML = '';
+    pdfjsBox.replaceChildren();
     document.body.style.overflow = '';
   }
 })();

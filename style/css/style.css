@@ -36,6 +36,7 @@ a:hover { color: var(--crimson-deep); }
   border-bottom: 4px solid var(--gold);
   position: relative;
 }
+.site-header.compact-header { padding-bottom: 2.25rem; }
 .site-header::before {
   content: '';
   position: absolute; inset: 0;
@@ -223,6 +224,7 @@ a:hover { color: var(--crimson-deep); }
 .exam-row .btn:hover { border-color: var(--crimson); color: var(--crimson); }
 .exam-row .btn.primary { background: var(--crimson); color: #fff; border-color: var(--crimson); }
 .exam-row .btn.primary:hover { background: var(--crimson-deep); border-color: var(--crimson-deep); }
+.exam-row .path-error { color: #a00; font-size: .78rem; }
 
 .empty {
   color: var(--ink-3); font-size: .82rem; font-style: italic;
@@ -236,6 +238,28 @@ a:hover { color: var(--crimson-deep); }
   color: #a00; border-radius: 8px; font-size: .9rem;
   white-space: pre-wrap; font-family: monospace;
 }
+
+.not-found-page {
+  max-width: 760px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+.not-found-page p {
+  margin: .65rem 0;
+  color: var(--ink-2);
+}
+.site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: .4rem;
+  padding: .45rem .9rem;
+  border-radius: 4px;
+  background: var(--crimson);
+  color: #fff;
+  font-size: .88rem;
+}
+.site-button:hover { background: var(--crimson-deep); color: #fff; }
 
 /* ===== Viewer Modal ===== */
 #viewer-modal[hidden] { display: none !important; }
