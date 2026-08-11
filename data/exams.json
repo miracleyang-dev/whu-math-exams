@@ -159,7 +159,7 @@
       "exam_type": "mock",
       "teacher": "杨志坚",
       "file_path": "exams/06-applied-computational/numerical-algebra/数值线性代数_练习习题1_杨志坚.pdf",
-      "sha256": null
+      "sha256": "8a555c94fd38f6df5a3a7e65969793bccf7b683ab88cb3d0f8239798e0514837"
     },
     {
       "id": "numerical-algebra_练习习题2_yangzhijian",
@@ -172,7 +172,7 @@
       "exam_type": "mock",
       "teacher": "杨志坚",
       "file_path": "exams/06-applied-computational/numerical-algebra/数值线性代数_练习习题2_杨志坚.pdf",
-      "sha256": null
+      "sha256": "631a1c95721deb03523a0c34c610e38b400d6674db0c5fb4d2617ac0261f9c4f"
     },
     {
       "id": "numerical-algebra_练习习题3_yangzhijian",
@@ -185,7 +185,7 @@
       "exam_type": "mock",
       "teacher": "杨志坚",
       "file_path": "exams/06-applied-computational/numerical-algebra/数值线性代数_练习习题3_杨志坚.pdf",
-      "sha256": null
+      "sha256": "803d1e2b1ccf18dd27df04f31446571d0bc4641e22f407a395ce35b6ad007171"
     },
     {
       "id": "commutative-algebra_2021-2022-2_final_xuejiangwei",
@@ -698,26 +698,26 @@
       "id": "fra-analysis-i_2024-2025-1_final_liaolingmin",
       "category_id": "07-zhongfa-class",
       "course_slug": "fra-analysis-i",
-      "course_name_cn": "分析I(习题)",
+      "course_name_cn": "分析I",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
       "semester": "1",
       "exam_type": "final",
       "teacher": "廖灵敏",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析I(习题)_2024-2025-1_期末_廖灵敏.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-i/分析I(习题)_2024-2025-1_期末_廖灵敏.pdf",
       "sha256": "e96ca1bec4600e5c71bed6eb3c1fd0dd64659008b8e841ac50abbdcc22527367"
     },
     {
       "id": "fra-analysis-ii_2024-2025-2_final_liaolingmin",
       "category_id": "07-zhongfa-class",
       "course_slug": "fra-analysis-ii",
-      "course_name_cn": "分析II(习题)",
+      "course_name_cn": "分析II",
       "course_level": "undergraduate",
       "academic_year": "2024-2025",
       "semester": "2",
       "exam_type": "final",
       "teacher": "廖灵敏",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析II(习题)_2024-2025-2_期末_廖灵敏.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-ii/分析II(习题)_2024-2025-2_期末_廖灵敏.pdf",
       "sha256": "6b1135bc6d37f58af8f9f2de3be5b751ad1fcff5f165172e85f17fef046c9d96"
     },
     {
@@ -730,7 +730,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "缪爽&马际华",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析III_2025-2026-1_期中_缪爽&马际华.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-iii/分析III_2025-2026-1_期中_缪爽&马际华.pdf",
       "sha256": "7830bb28f9934d44e9e5bbe4afe1a1fc47d27c613a9a35dabf8e84f01cf5ec77"
     },
     {
@@ -743,7 +743,7 @@
       "semester": "2",
       "exam_type": "midterm",
       "teacher": "缪爽&廖灵敏",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析II_2024-2025-2_期中_缪爽&廖灵敏.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-ii/分析II_2024-2025-2_期中_缪爽&廖灵敏.pdf",
       "sha256": "8a0c7a9fd1534ea88b1885d0e8280c5804abe2486af78f35db671b6b2ed7a244"
     },
     {
@@ -756,7 +756,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "廖灵敏",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析II_2025-2026-2_小测1_廖灵敏.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-ii/分析II_2025-2026-2_小测1_廖灵敏.pdf",
       "sha256": "c6fd8b95fbc2a9944507fb49efe153f55d62e977a7041c544e6c8c1c6e699388"
     },
     {
@@ -769,7 +769,7 @@
       "semester": "2",
       "exam_type": "midterm",
       "teacher": "廖灵敏",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析II_2025-2026-2_期中_廖灵敏.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-ii/分析II_2025-2026-2_期中_廖灵敏.pdf",
       "sha256": "bc4a1e6090efff069065967117efa68e7cac709a32ee07ec773cbf093f3693b5"
     },
     {
@@ -782,7 +782,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "Philippe Marchal",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析IV_2025-2026-2_小测1_Philippe Marchal.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-iv/分析IV_2025-2026-2_小测1_Philippe Marchal.pdf",
       "sha256": "13f86d2e2f27ec154fad797ab9fd0c4b8975de275e6ad1516d626f8496ee81a4"
     },
     {
@@ -795,7 +795,7 @@
       "semester": "2",
       "exam_type": "midterm",
       "teacher": "Ludovick Gagnon",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析IV_2025-2026-2_期中_Ludovick Gagnon.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-iv/分析IV_2025-2026-2_期中_Ludovick Gagnon.pdf",
       "sha256": "28c2847a7cae90e1c8a02debc86907029e5b558064715669575344e25c89befa"
     },
     {
@@ -808,7 +808,7 @@
       "semester": "2",
       "exam_type": "final",
       "teacher": "Philippe Marchal",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析IV_2025-2026-2_期末_Philippe Marchal.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-iv/分析IV_2025-2026-2_期末_Philippe Marchal.pdf",
       "sha256": "80569b511e854d43bc71cbc9d6db485abf16b69dcb9ccdb6674364f543805c3a"
     },
     {
@@ -821,7 +821,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "廖灵敏",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析I_2025-2026-1_期中_廖灵敏.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-i/分析I_2025-2026-1_期中_廖灵敏.pdf",
       "sha256": "be6cb09485458a26fd02b4306294e65e0c6feb9d4398a62cb1a5a8eb1236930d"
     },
     {
@@ -834,7 +834,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "薛江维",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数III_2025-2026-1_期末_薛江维.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-iii/代数III_2025-2026-1_期末_薛江维.pdf",
       "sha256": "f3c91b81d188399b4c141febd0233a5a9a25ce2cf423457f1f61e328b16351ff"
     },
     {
@@ -847,7 +847,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "林兴君&薛江维",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数II_2024-2025-2_小测_林兴君&薛江维.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-ii/代数II_2024-2025-2_小测_林兴君&薛江维.pdf",
       "sha256": "9964956e39f25272ca3414a56afad4d3f2e1e2d0810e950c03036889cb57893a"
     },
     {
@@ -860,7 +860,7 @@
       "semester": "2",
       "exam_type": "midterm",
       "teacher": "薛江维&林兴君",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数II_2024-2025-2_期中_薛江维&林兴君.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-ii/代数II_2024-2025-2_期中_薛江维&林兴君.pdf",
       "sha256": "5398e5a50c96ce13fed93b5673af5d79dee786736b0acd74f1b32a3443a4755b"
     },
     {
@@ -873,7 +873,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数II_2025-2026-2_小测1_王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-ii/代数II_2025-2026-2_小测1_王好武.pdf",
       "sha256": "430dba013e69de5405329a12e4600cc03720b7339014b2162e9eaf48da8dec47"
     },
     {
@@ -886,7 +886,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数II_2025-2026-2_小测2_王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-ii/代数II_2025-2026-2_小测2_王好武.pdf",
       "sha256": "b5cb2ad5bb01cb2b5b9194e2e751f08bd277802835a097455df331c450321555"
     },
     {
@@ -899,7 +899,7 @@
       "semester": "2",
       "exam_type": "midterm",
       "teacher": "王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数II_2025-2026-2_期中_王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-ii/代数II_2025-2026-2_期中_王好武.pdf",
       "sha256": "27b1f86de87b3bc8ef3500e1191ec11c56bde6f03adf74e46d8decad59d90f11"
     },
     {
@@ -912,7 +912,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "David Renard",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数IV_2025-2026-2_小测1_David Renard.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-iv/代数IV_2025-2026-2_小测1_David Renard.pdf",
       "sha256": "bc40759a7f8f4649d93ec210b705f565a24a9c3c9b4d8a4110c3cdcbcfc53666"
     },
     {
@@ -925,7 +925,7 @@
       "semester": "2",
       "exam_type": "quiz",
       "teacher": "David Renard",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数IV_2025-2026-2_小测2_David Renard.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-iv/代数IV_2025-2026-2_小测2_David Renard.pdf",
       "sha256": "4e2539bcf036361da27ab889fc59c6fe036aee4cb6f0eadca2b7827d609e28d6"
     },
     {
@@ -938,7 +938,7 @@
       "semester": "2",
       "exam_type": "midterm",
       "teacher": "André Belotto",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数IV_2025-2026-2_期中_André Belotto.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-iv/代数IV_2025-2026-2_期中_André Belotto.pdf",
       "sha256": "275ebd188e92ab3b274e7e394b495a9f76c41aef255151c457ce67e683fa3d71"
     },
     {
@@ -951,7 +951,7 @@
       "semester": "2",
       "exam_type": "final",
       "teacher": "David Renard",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数IV_2025-2026-2_期末_David Renard.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-iv/代数IV_2025-2026-2_期末_David Renard.pdf",
       "sha256": "c568fa99d51d983d241acc2c1784671fb6fccaff48f0a98ef4f030fb27336ccc"
     },
     {
@@ -964,7 +964,7 @@
       "semester": "1",
       "exam_type": "quiz",
       "teacher": "薛江维&王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数I_2024-2025-1_小测1_薛江维&王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-i/代数I_2024-2025-1_小测1_薛江维&王好武.pdf",
       "sha256": "96b03291d2108b6a6353fb9dd23f078be4f883685a839597411bcd839115e161"
     },
     {
@@ -977,7 +977,7 @@
       "semester": "1",
       "exam_type": "midterm",
       "teacher": "薛江维&王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数I_2024-2025-1_期中_薛江维&王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-i/代数I_2024-2025-1_期中_薛江维&王好武.pdf",
       "sha256": "f034fb6d0ab9864ebd20c4351b7ccb216522d363713e195ccc3c77c6a105fd07"
     },
     {
@@ -990,7 +990,7 @@
       "semester": "1",
       "exam_type": "quiz",
       "teacher": "王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数I_2025-2026-1_小测1_王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-i/代数I_2025-2026-1_小测1_王好武.pdf",
       "sha256": "ee8937b0463aebf6a038c134500629343cb01d47dcc0ee7e32d4672f0858f902"
     },
     {
@@ -1003,7 +1003,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数I_2025-2026-1_期末_王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-i/代数I_2025-2026-1_期末_王好武.pdf",
       "sha256": "6b5e90b0ba0bf8c16afe36f4569afdc665ff332d6550fb82e35cd4bc9a2d20cb"
     },
     {
@@ -1328,7 +1328,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "缪爽&马际华",
-      "file_path": "exams/07-zhongfa-class/fra-analysis/分析III_2025-2026-1_期末_缪爽&马际华.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-analysis-iii/分析III_2025-2026-1_期末_缪爽&马际华.pdf",
       "sha256": "5740aba8d0661f694a90ab04c5f3d4a7218af02b8cce1ce8fb8e36340ed0cabe"
     },
     {
@@ -1341,7 +1341,7 @@
       "semester": "1",
       "exam_type": "final",
       "teacher": "薛江维&王好武",
-      "file_path": "exams/07-zhongfa-class/fra-algebra/代数I_2024-2025-1_期末_薛江维&王好武.pdf",
+      "file_path": "exams/07-zhongfa-class/fra-algebra-i/代数I_2024-2025-1_期末_薛江维&王好武.pdf",
       "sha256": "e0b2562bfa747fdbd5b8d8d864361c3ee2e4de8688821fd12a7bbacf38ffbfff"
     },
     {
@@ -1735,185 +1735,185 @@
       "sha256": "86fdd8ac914ed8c5b7263a967df0cd6e9ead8c848f9fe1ae44f0738e0cdead03"
     },
     {
-      "id": "advanced-algebra-geo_2015-2016-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2015-2016-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2015-2016",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2015-2016-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2015-2016-2_期末_未知.pdf",
       "sha256": "a79fdc09802556c69579d80636af1dd2fa304a8216a5b22f73809c1b63059752"
     },
     {
-      "id": "advanced-algebra-geo_2016-2017-1_final_unknown",
+      "id": "advanced-algebra-geo-1_2016-2017-1_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
       "course_level": "undergraduate",
       "academic_year": "2016-2017",
       "semester": "1",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2016-2017-1_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2016-2017-1_期末_未知.pdf",
       "sha256": "7b6b0e81bfd7cb11544bead0c0e23136ab79d7414e4f1db6ca9e299f8d7762b5"
     },
     {
-      "id": "advanced-algebra-geo_2016-2017-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2016-2017-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2016-2017",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2016-2017-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2016-2017-2_期末_未知.pdf",
       "sha256": "50db4eb3c0a321a954c493af025f90530035ca999aa08c8750446f51ff1d5b43"
     },
     {
-      "id": "advanced-algebra-geo_2017-2018-1_final_unknown",
+      "id": "advanced-algebra-geo-1_2017-2018-1_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
       "course_level": "undergraduate",
       "academic_year": "2017-2018",
       "semester": "1",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2017-2018-1_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2017-2018-1_期末_未知.pdf",
       "sha256": "e7d240ca381ea7236099d4081ab504542036d9749e27d1815f383a6ae6055490"
     },
     {
-      "id": "advanced-algebra-geo_2017-2018-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2017-2018-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2017-2018",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2017-2018-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2017-2018-2_期末_未知.pdf",
       "sha256": "a7638b28429ba2ddf221cbd732886e167dc62b65a47df76debfee9722dfaa494"
     },
     {
-      "id": "advanced-algebra-geo_2018-2019-1_final_unknown",
+      "id": "advanced-algebra-geo-1_2018-2019-1_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
       "course_level": "undergraduate",
       "academic_year": "2018-2019",
       "semester": "1",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2018-2019-1_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2018-2019-1_期末_未知.pdf",
       "sha256": "248d67f9f51ba3e07beebe6bbeed4853944437a9a022cfb8fd99ab8f90ef8b2c"
     },
     {
-      "id": "advanced-algebra-geo_2018-2019-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2018-2019-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2018-2019",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2018-2019-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2018-2019-2_期末_未知.pdf",
       "sha256": "58ad9de915e0a69b50318782c9078c1c716c5b24c46fcc29c1a42dd709cdf264"
     },
     {
-      "id": "advanced-algebra-geo_2019-2020-1_final_unknown",
+      "id": "advanced-algebra-geo-1_2019-2020-1_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
       "course_level": "undergraduate",
       "academic_year": "2019-2020",
       "semester": "1",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2019-2020-1_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2019-2020-1_期末_未知.pdf",
       "sha256": "ea8ee5f850132e3ead753f858aa869cca2e005c4462e8ec89bbf776cc3f264b0"
     },
     {
-      "id": "advanced-algebra-geo_2019-2020-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2019-2020-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2019-2020",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2019-2020-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2019-2020-2_期末_未知.pdf",
       "sha256": "9a23737767a04c97e882c64e4cfd73de25065fab6f029b2aa2faf4f38b987b2a"
     },
     {
-      "id": "advanced-algebra-geo_2020-2021-1_final_unknown",
+      "id": "advanced-algebra-geo-1_2020-2021-1_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
       "course_level": "undergraduate",
       "academic_year": "2020-2021",
       "semester": "1",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2020-2021-1_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2020-2021-1_期末_未知.pdf",
       "sha256": "12bb73314b74e5eb0ed07fb6bb6b94d387db1012b7ea214e43299e3d1d0701eb"
     },
     {
-      "id": "advanced-algebra-geo_2020-2021-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2020-2021-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2020-2021",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2020-2021-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2020-2021-2_期末_未知.pdf",
       "sha256": "96b64fafb72b66780b180a7599bab5caf60b861531753d0c6bf580fb7402ee19"
     },
     {
-      "id": "advanced-algebra-geo_2021-2022-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2021-2022-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2021-2022",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2021-2022-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2021-2022-2_期末_未知.pdf",
       "sha256": "b36cc963e43965739249a1a2f64c1baec68b380ece1682d7843c53c3db193066"
     },
     {
-      "id": "advanced-algebra-geo_2022-2023-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2022-2023-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2022-2023",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2022-2023-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2022-2023-2_期末_未知.pdf",
       "sha256": "a8f385fb8f81091913d1cf6339ea88c1fd81399878facb5e8c06f3269bf7851c"
     },
     {
-      "id": "advanced-algebra-geo_2023-2024-2_final_unknown",
+      "id": "advanced-algebra-geo-2_2023-2024-2_final_unknown",
       "category_id": "01-foundation",
-      "course_slug": "advanced-algebra-geo",
-      "course_name_cn": "高等代数与解析几何",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
       "course_level": "undergraduate",
       "academic_year": "2023-2024",
       "semester": "2",
       "exam_type": "final",
       "teacher": "未知",
-      "file_path": "exams/01-foundation/advanced-algebra-geo/高等代数与解析几何_2023-2024-2_期末_未知.pdf",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2023-2024-2_期末_未知.pdf",
       "sha256": "f08617d23684b15eefcd730f7be1f1c715cbd686738b23d3ff92cc93c31f9c9d"
     },
     {
@@ -2435,6 +2435,214 @@
       "teacher": "涂振汉",
       "file_path": "exams/02-analysis-pde/complex-analysis/复变函数_期末考试题汇总_涂振汉.pdf",
       "sha256": "dda7d57f69f852c0037838a45099d79e41bf68de564c6e2a6ed91f3a879c5616"
+    },
+    {
+      "id": "advanced-algebra-geo-1_2023-2024-1_final_fanqibin-tuyuping",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "樊启斌&涂玉平",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2023-2024-1_期末_樊启斌&涂玉平.pdf",
+      "sha256": "263e8779ff25ab8412d9b9bf7f57fd17582fbf91bb4a94768fe959d7c6fbeed4"
+    },
+    {
+      "id": "advanced-algebra-geo-1_2023-2024-1_final_sunjun",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "孙俊",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2023-2024-1_期末_孙俊.pdf",
+      "sha256": "42c711660ed73fec5d63c3f31a6ddce92ee318661da7bdcfe9f7fa85c497b5b7"
+    },
+    {
+      "id": "advanced-algebra-geo-2_2023-2024-2_quiz2_fanqibin",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "2",
+      "exam_type": "quiz",
+      "teacher": "樊启斌",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2023-2024-2_测验二_樊启斌.pdf",
+      "sha256": "a9b7f3b9e49c2c77093d66a24d9f93def03c97c69a1c9f4f719f2e23a54e2762"
+    },
+    {
+      "id": "advanced-algebra-geo-2_2023-2024-2_midterm_fanqibin",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "2",
+      "exam_type": "midterm",
+      "teacher": "樊启斌",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2023-2024-2_期中_樊启斌.pdf",
+      "sha256": "c8fae38c8a8767db57a217e147587ce4a4472dddcf63bbc00f3587f7db4f0cc4"
+    },
+    {
+      "id": "advanced-algebra-geo-2_2023-2024-2_midterm_sunjun",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "2",
+      "exam_type": "midterm",
+      "teacher": "孙俊",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2023-2024-2_期中_孙俊.pdf",
+      "sha256": "8cb489b1286b2a5203fd410366ac3e582a1555c573edb689577a4eda6d0f1194"
+    },
+    {
+      "id": "advanced-algebra-geo-2_2023-2024-2_midterm2_sunjun",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "2",
+      "exam_type": "midterm",
+      "teacher": "孙俊",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2023-2024-2_期中2_孙俊.pdf",
+      "sha256": "7a714a97b204e0caffc8e500b25a5a823967e744ba250b8c10bcb01cb34fa379"
+    },
+    {
+      "id": "advanced-algebra-geo-2_2024-2025-2_final_sunjun",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "孙俊",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2024-2025-2_期末_孙俊.pdf",
+      "sha256": "4f1221695cb10685c056a6dc59770745878feb3b8af221b0604bb07884c1d459"
+    },
+    {
+      "id": "advanced-algebra-geo-2_2024-2025-2_midterm_unknown",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-2",
+      "course_name_cn": "高等代数与解析几何2",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "midterm",
+      "teacher": "未知",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-2/高等代数与解析几何2_2024-2025-2_期中_未知.pdf",
+      "sha256": "c861f79d67d767547f2f075bc4554c7ed8cd6294132d1b7497346d7ffd1c0ec3"
+    },
+    {
+      "id": "pde_2019-2020-2_final_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2019-2020",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/pde/广义函数与偏微分方程_2019-2020-2_期末_缪爽.pdf",
+      "sha256": "4f5eb07dd0ed72fa90437cfbaca49a10fcc194ea16e224fe594b0cfd27433b88"
+    },
+    {
+      "id": "pde_2022-2023-1_final_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2022-2023",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/pde/广义函数与偏微分方程_2022-2023-1_期末_缪爽.pdf",
+      "sha256": "63b66889f28a90ec86c89a549ac323082361a2262df6f759e96f4249e72ae028"
+    },
+    {
+      "id": "pde_2023-2024-2_final_chenhua",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "陈化",
+      "file_path": "exams/02-analysis-pde/pde/广义函数与偏微分方程_2023-2024-2_期末_陈化.pdf",
+      "sha256": "28c63a65a89107aad8d94b72682f09de41b0a2b13bdcdfbb6a566da15c6f55ed"
+    },
+    {
+      "id": "math-analysis-1_2023-2024-1_final_zhangyiping",
+      "category_id": "01-foundation",
+      "course_slug": "math-analysis-1",
+      "course_name_cn": "数学分析1",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "章逸平",
+      "file_path": "exams/01-foundation/math-analysis-1/数学分析1_2023-2024-1_期末_章逸平.pdf",
+      "sha256": "3fdb14b83f1810d5ba3e9a2f931b275663e98ad7e2737c1e96882dfa70aaff96"
+    },
+    {
+      "id": "math-analysis-1_2023-2024-1_midterm_zhangzhongxiang",
+      "category_id": "01-foundation",
+      "course_slug": "math-analysis-1",
+      "course_name_cn": "数学分析1",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "张忠祥",
+      "file_path": "exams/01-foundation/math-analysis-1/数学分析1_2023-2024-1_期中_张忠祥.pdf",
+      "sha256": "097ca46caf478b19b50e85323f1a9c720541d8d0d5c1e1456b2df9e88fa4fb43"
+    },
+    {
+      "id": "math-analysis-1_2024-2025-1_midterm_zhouxiaofang-gongyafang",
+      "category_id": "01-foundation",
+      "course_slug": "math-analysis-1",
+      "course_name_cn": "数学分析1",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "周小方&龚亚方",
+      "file_path": "exams/01-foundation/math-analysis-1/数学分析1_2024-2025-1_期中_周小方&龚亚方.pdf",
+      "sha256": "28e0825ddf0787d8364679daac4a6f7321d7291aac46717fd5cbbfc828f4e7d6"
+    },
+    {
+      "id": "pde_2023-2024-1_final_aoweiwei",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "敖微微",
+      "file_path": "exams/02-analysis-pde/pde/数学物理方程_2023-2024-1_期末_敖微微.pdf",
+      "sha256": "22f47173dfba47d54b37ae8b6728cbb7a1e8b9884458f44657bd95ea3b48dd5a"
+    },
+    {
+      "id": "pde_2023-2024-1_midterm_aoweiwei",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "敖微微",
+      "file_path": "exams/02-analysis-pde/pde/数学物理方程_2023-2024-1_期中_敖微微.pdf",
+      "sha256": "775225b278029b9beb6b3381cb32ed3c82d604c3a254764e0493376ff5bef110"
     }
   ]
 }
