@@ -251,66 +251,7 @@ window.addEventListener('error', e => {
   });
 
   // ---- PDF viewer ----
-  const pdfjsMobileQuery = window.matchMedia('(max-width: 860px)');
-  const pdfjsCandidates = [
-    {
-      script: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.min.js',
-      worker: 'https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js'
-    },
-    {
-      script: 'https://unpkg.com/pdfjs-dist@3.11.174/legacy/build/pdf.min.js',
-      worker: 'https://unpkg.com/pdfjs-dist@3.11.174/legacy/build/pdf.worker.min.js'
-    },
-    {
-      script: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js',
-      worker: 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'
-    }
-  ];
   let pdfRenderToken = 0;
-  let pdfjsLoadPromise;
-
-  function loadScript(src) {
-    return new Promise((resolve, reject) => {
-      const script = document.createElement('script');
-      script.src = src;
-      script.async = true;
-      script.onload = resolve;
-      script.onerror = () => reject(new Error(`PDF.js 加载失败：${src}`));
-      document.head.append(script);
-    });
-  }
-
-  async function ensurePdfjsLoaded() {
-    if (window.pdfjsLib) {
-      if (window.pdfjsLib.GlobalWorkerOptions && !window.pdfjsLib.GlobalWorkerOptions.workerSrc) {
-        window.pdfjsLib.GlobalWorkerOptions.workerSrc = pdfjsCandidates[0].worker;
-      }
-      return window.pdfjsLib;
-    }
-    if (pdfjsLoadPromise) return pdfjsLoadPromise;
-
-    pdfjsLoadPromise = (async () => {
-      const errors = [];
-      for (const candidate of pdfjsCandidates) {
-        try {
-          await loadScript(candidate.script);
-          if (window.pdfjsLib) {
-            window.pdfjsLib.GlobalWorkerOptions.workerSrc = candidate.worker;
-            return window.pdfjsLib;
-          }
-          errors.push(candidate.script);
-        } catch (err) {
-          errors.push(err.message);
-        }
-      }
-      throw new Error(`PDF.js 加载失败，请检查网络后重试。已尝试 ${errors.length} 个来源。`);
-    })().catch(err => {
-      pdfjsLoadPromise = null;
-      throw err;
-    });
-
-    return pdfjsLoadPromise;
-  }
 
   function setViewerMessage(className, message) {
     const frame = document.getElementById('viewer-frame');
@@ -339,74 +280,12 @@ window.addEventListener('error', e => {
     }
   }
 
-  async function renderPdfMobile(filePath, token) {
-    const container = document.getElementById('viewer-pdfjs');
-    replaceWithMessage(container, 'pdfjs-loading', '加载中…');
-    try {
-      const pdfjs = await ensurePdfjsLoaded();
-      if (token !== pdfRenderToken) return;
-      const pdf = await pdfjs.getDocument({
-        url: filePath,
-        disableStream: false,
-        disableAutoFetch: false,
-        isEvalSupported: false
-      }).promise;
-      if (token !== pdfRenderToken) return;
-
-      container.replaceChildren();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const width = Math.max(container.clientWidth - 16, 240);
-      const pages = [];
-
-      const renderPage = async (entry) => {
-        if (entry.rendered || entry.rendering || token !== pdfRenderToken) return;
-        entry.rendering = true;
-        try {
-          const page = await pdf.getPage(entry.index);
-          if (token !== pdfRenderToken) return;
-          const viewport = page.getViewport({ scale: 1 });
-          const scale = width / viewport.width;
-          const scaled = page.getViewport({ scale: scale * dpr });
-          const canvas = document.createElement('canvas');
-          canvas.width = Math.ceil(scaled.width);
-          canvas.height = Math.ceil(scaled.height);
-          canvas.style.width = (scaled.width / dpr) + 'px';
-          canvas.style.height = (scaled.height / dpr) + 'px';
-          entry.host.replaceChildren(canvas);
-          await page.render({ canvasContext: canvas.getContext('2d', { alpha: false }), viewport: scaled }).promise;
-          entry.host.classList.add('is-rendered');
-          entry.rendered = true;
-        } finally {
-          entry.rendering = false;
-        }
-      };
-
-      for (let i = 1; i <= pdf.numPages; i++) {
-        const host = document.createElement('div');
-        host.className = 'pdfjs-page';
-        host.textContent = `第 ${i} 页`;
-        container.append(host);
-        pages.push({ index: i, host, rendered: false, rendering: false });
-      }
-
-      if (window.IntersectionObserver) {
-        const observer = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const page = pages.find(item => item.host === entry.target);
-              if (page) renderPage(page).catch(() => {});
-            }
-          });
-        }, { root: container, rootMargin: '800px 0px' });
-        pages.forEach(page => observer.observe(page.host));
-      } else {
-        for (const page of pages) await renderPage(page);
-      }
-      if (pages[0]) await renderPage(pages[0]);
-    } catch (err) {
-      if (token !== pdfRenderToken) return;
-      setViewerMessage('pdfjs-error', `预览失败：${err.message}。可点击下载或在线预览。`);
-    }
+  function showIframePreview(frame, pdfjsBox, viewerUrl) {
+    pdfjsBox.hidden = true;
+    pdfjsBox.replaceChildren();
+    frame.hidden = false;
+    frame.src = '';
+    requestAnimationFrame(() => { frame.src = viewerUrl; });
   }
 
   document.addEventListener('click', async ev => {
@@ -424,29 +303,12 @@ window.addEventListener('error', e => {
     document.getElementById('viewer-online').href = viewerUrl;
     document.getElementById('viewer-modal').hidden = false;
     document.body.style.overflow = 'hidden';
-    setViewerMessage('pdfjs-loading', '加载中…');
 
-    try {
-      await assertPdfResponse(filePath);
-    } catch (err) {
-      if (token !== pdfRenderToken) return;
-      setViewerMessage('pdfjs-error', `预览失败：${err.message}。可点击下载或在线预览。`);
-      return;
-    }
-    if (token !== pdfRenderToken) return;
+    showIframePreview(frame, pdfjsBox, viewerUrl);
 
-    if (pdfjsMobileQuery.matches) {
-      frame.hidden = true;
-      frame.src = '';
-      pdfjsBox.hidden = false;
-      renderPdfMobile(filePath, token);
-    } else {
-      pdfjsBox.hidden = true;
-      pdfjsBox.replaceChildren();
-      frame.hidden = false;
-      frame.src = '';
-      requestAnimationFrame(() => { frame.src = viewerUrl; });
-    }
+    assertPdfResponse(filePath).catch(err => {
+      if (token === pdfRenderToken) console.warn('[app.js] PDF background validation failed', err);
+    });
   });
   document.getElementById('viewer-close').onclick = closeViewer;
   document.addEventListener('keydown', ev => { if (ev.key === 'Escape') closeViewer(); });
