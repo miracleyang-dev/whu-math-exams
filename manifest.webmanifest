@@ -1,0 +1,36 @@
+{
+  "name": "武大数统院本科试卷归档",
+  "short_name": "武大试卷库",
+  "description": "武汉大学数学与统计学院本科历年试卷归档。",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "icons": [
+    {
+      "src": "/assets/app-icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/app-icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/app-icons/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/app-icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

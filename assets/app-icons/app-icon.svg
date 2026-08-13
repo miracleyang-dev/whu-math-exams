@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">Sakura Tower App Icon</title>
+  <desc id="desc">An abstract app icon inspired by pink blossoms in front of a white campus tower.</desc>
+  <defs>
+    <linearGradient id="sky" x1="210" y1="80" x2="840" y2="930" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6f8790"/>
+      <stop offset="0.46" stop-color="#526c68"/>
+      <stop offset="1" stop-color="#064e3b"/>
+    </linearGradient>
+    <linearGradient id="tower" x1="350" y1="142" x2="690" y2="880" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e7ebe5"/>
+      <stop offset="0.58" stop-color="#c8d0c8"/>
+      <stop offset="1" stop-color="#9aaaa0"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="170" y1="160" x2="860" y2="850" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffd6e7"/>
+      <stop offset="0.54" stop-color="#f3a2c5"/>
+      <stop offset="1" stop-color="#c84f89"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#022c22" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect width="1024" height="1024" rx="224" fill="url(#sky)"/>
+  <circle cx="512" cy="512" r="364" fill="#052e25" opacity="0.42"/>
+  <path d="M256 890 382 130h360l62 760H256Z" fill="#dce5de" opacity="0.25"/>
+  <g filter="url(#shadow)">
+    <path d="M310 858 430 154h284l68 704H310Z" fill="url(#tower)"/>
+    <path d="M468 154 398 858M596 154l14 704" stroke="#9fafaa" stroke-width="16" opacity="0.92"/>
+    <path d="M430 248h280M416 356h306M398 468h338M382 584h366M364 704h398" stroke="#edf2ec" stroke-width="20" stroke-linecap="round" opacity="0.78"/>
+    <path d="M450 286h90M574 286h92M438 394h96M572 394h108M424 508h104M574 508h120M408 628h110M574 628h132M390 750h122M574 750h144" stroke="#14252a" stroke-width="28" stroke-linecap="round" opacity="0.78"/>
+  </g>
+  <path d="M150 832C265 667 358 541 470 413c86-99 177-177 314-268" fill="none" stroke="#3c2724" stroke-width="34" stroke-linecap="round"/>
+  <path d="M178 706c122-66 228-96 359-88 116 8 204 42 308 110" fill="none" stroke="#3c2724" stroke-width="22" stroke-linecap="round"/>
+  <path d="M206 525c90-37 170-44 255-22 73 18 132 55 194 116" fill="none" stroke="#3c2724" stroke-width="18" stroke-linecap="round" opacity="0.95"/>
+  <g fill="url(#pink)" stroke="#fff1f7" stroke-width="8">
+    <g transform="translate(210 512) rotate(-18)"><path d="M0-38C31-54 54-26 37 0c29 6 33 42 2 45C26 72-12 70-14 37c-26 18-57-5-42-34-30-10-23-47 9-46 6-31 42-31 47 5Z"/></g>
+    <g transform="translate(340 646) rotate(12)"><path d="M0-42C34-60 60-28 40 1c33 7 37 47 2 50C28 79-13 77-16 41c-29 20-63-5-46-37-33-11-26-52 10-51 7-34 47-34 52 5Z"/></g>
+    <g transform="translate(482 466) rotate(26)"><path d="M0-34C28-49 49-24 34 0c26 6 30 38 2 41C23 65-11 63-13 34c-23 16-51-4-37-31-27-9-21-43 8-42 5-28 38-28 42 5Z"/></g>
+    <g transform="translate(648 606) rotate(-8)"><path d="M0-45C36-64 64-31 43 1c35 8 40 50 2 54C30 84-15 83-17 44c-31 21-68-5-49-40-36-12-28-56 11-55 7-37 50-37 55 6Z"/></g>
+    <g transform="translate(770 732) rotate(18)"><path d="M0-36C29-51 51-25 35 0c28 6 32 40 2 43C24 68-12 66-14 36c-25 17-54-4-39-33-29-10-22-46 8-45 6-30 40-30 45 6Z"/></g>
+    <g transform="translate(746 248) rotate(-18)"><path d="M0-30C24-43 42-20 29 0c23 5 27 34 2 36C20 57-10 55-12 30c-20 14-45-4-33-27-24-8-18-39 7-38 5-25 34-25 38 5Z"/></g>
+    <g transform="translate(264 770) rotate(34)"><path d="M0-29C24-42 42-20 29 0c23 5 26 33 2 36C20 56-10 55-11 29c-20 14-44-4-32-26-23-8-18-38 7-37 5-25 33-25 36 5Z"/></g>
+  </g>
+  <g fill="#f7c0d8" opacity="0.85">
+    <circle cx="548" cy="682" r="18"/>
+    <circle cx="182" cy="650" r="16"/>
+    <circle cx="824" cy="548" r="15"/>
+    <circle cx="708" cy="812" r="18"/>
+  </g>
+  <circle cx="512" cy="814" r="78" fill="#063d32" opacity="0.78"/>
+  <path d="M462 762h116v28h-61l53 31-53 31h65v28H462v-32l56-27-56-29Z" fill="#fff1c2"/>
+</svg>

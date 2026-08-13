@@ -4,11 +4,24 @@
 
 在线访问：[whu-math-exams-production.up.railway.app](https://whu-math-exams-production.up.railway.app)
 
+## 添加到桌面 / 主屏幕
+
+本项目可以直接从浏览器添加到桌面或手机主屏幕，作为一个轻量“APP”使用。
+
+- iPhone / iPad：用 Safari 打开网站，点分享按钮，选择“添加到主屏幕”。
+- Android：用 Chrome / Edge 打开网站，点右上角菜单，选择“添加到主屏幕”或“安装应用”。
+- 电脑端：用 Chrome / Edge 打开网站，在地址栏或菜单中选择“安装应用”/“将此站点安装为应用”。
+
+添加后会使用项目内置的樱花楼影图标。
+
 ## 目录结构
 
 ```
 whu-math-exams/
 ├── index.html                 # 网站单页入口
+├── manifest.webmanifest       # PWA / 添加到主屏幕配置
+├── assets/
+│   └── app-icons/             # SVG、PNG、ICO 等站点图标资产
 ├── style/
 │   ├── css/style.css
 │   └── js/app.js              # 列表渲染 + 嵌入式 PDF 预览（PC 用 iframe，移动端用 PDF.js）
@@ -73,6 +86,12 @@ try_files {path} /index.html
 ```
 
 Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。
+
+## 图标维护
+
+图标资产统一放在 `assets/app-icons/`，其中 `app-icon.svg` 是可编辑源文件，PNG、ICO、Apple Touch Icon 等为实际引用文件。
+
+浏览器“添加到主屏幕”主要读取 `manifest.webmanifest` 中的 `icon-192.png` / `icon-512.png` / maskable 图标；网页 favicon 和 iOS 图标在 `index.html`、`404.html` 的 `<head>` 中引用。更新图标时尽量保持文件名不变，替换同名文件即可。
 
 ## 贡献流程
 
