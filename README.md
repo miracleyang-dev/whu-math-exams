@@ -74,6 +74,12 @@ whu-math-exams/
 同课程 + 同学期 + 不同教师 → 用教师姓名区分。
 同一份试卷有多位授课教师时用 `&` 连接，例如：`代数学2_2025-2026-2_期末_汪春晖&涂玉平.pdf`。
 
+## 贡献流程
+
+外部贡献者**不直接提交 PR**：将 LaTeX 排版的 PDF 与所需字段（见上表，可选）发给项目维护者，由维护者统一入库。
+
+仓库地址：`https://github.com/miracleyang-dev/whu-math-exams`
+
 ## 部署（Railway · 静态）
 
 仓库根目录添加 `Caddyfile`：
@@ -93,19 +99,6 @@ Railway 使用根目录 `Dockerfile` 构建 Caddy 静态站点。
 
 浏览器“添加到主屏幕”主要读取 `manifest.webmanifest` 中的 `icon-192.png` / `icon-512.png` / maskable 图标；网页 favicon 和 iOS 图标在 `index.html`、`404.html` 的 `<head>` 中引用。更新图标时尽量保持文件名不变，替换同名文件即可。
 
-## 贡献流程
-
-外部贡献者**不直接提交 PR**：将 LaTeX 排版的 PDF 与所需字段（见上表，可选）发给项目维护者，由维护者统一入库。
-
-仓库地址：`https://github.com/miracleyang-dev/whu-math-exams`
-
-## 本地新增或重新生成 PDF 后需要同步修改
-
-1. 将真实 PDF 文件放入 `exams/<category_id>/<course_slug>/`，文件名遵守上方命名规范。
-2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`exam_type`、`file_path`、`sha256`。
-3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
-4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
-
 ## Git LFS
 
 仓库中的 PDF 由 Git LFS 管理。首次克隆后执行：
@@ -116,6 +109,13 @@ git lfs pull
 ```
 
 新增或替换 PDF 后正常 `git add` / `git commit` 即可，`.gitattributes` 会自动将 `*.pdf` 交给 LFS 处理。若 PDF 只有约 130 字节，说明拿到的是指针文件，需要执行 `git lfs pull`。部署时 `Dockerfile` 会在构建阶段自动拉取真实的 LFS PDF。
+
+## 本地新增或重新生成 PDF 后需要同步修改
+
+1. 将真实 PDF 文件放入 `exams/<category_id>/<course_slug>/`，文件名遵守上方命名规范。
+2. 在 `data/exams.json` 新增或更新对应记录，至少同步 `id`、`category_id`、`course_slug`、`course_name_cn`、`course_level`、`exam_type`、`file_path`、`sha256`。
+3. 若是新增课程或分类，先同步更新 `data/courses.json`，并创建对应 `exams/` 子目录。
+4. 若重命名或替换 PDF，必须同步更新 `data/exams.json` 中的 `file_path` 与 `sha256`。
 
 ## License / 使用说明
 
