@@ -2,7 +2,11 @@
 
 开源静态站，集中归档武大数统院**本科**历年试卷。
 
-在线访问：[whu-math-exams-production.up.railway.app](https://whu-math-exams-production.up.railway.app)
+在线访问：[whu-math-exams-production.up.railway.app](https://whu-math-exams-production.up.railway.app)；访问密码：`gamma577215`。
+
+移动端请不要直接从 QQ 里打开，建议复制链接到 Safari / Chrome / Edge 等浏览器里打开。
+
+首次输入正确密码后，浏览器会在本地记住已验证状态，后续正常打开通常无需重复输入；清除浏览器数据或使用无痕模式时需要重新输入。
 
 ## 添加到桌面 / 主屏幕
 

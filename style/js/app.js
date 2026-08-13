@@ -12,7 +12,61 @@ window.addEventListener('error', e => {
   if (list) replaceWithMessage(list, 'error', `JS 错误: ${e.message}\n${e.filename}:${e.lineno}`);
 });
 
+const SITE_PASSWORD = 'gamma577215';
+const AUTH_STORAGE_KEY = 'whu-math-exams-authenticated';
+
+function requireSitePassword() {
+  const gate = document.getElementById('auth-gate');
+  const form = document.getElementById('auth-form');
+  const input = document.getElementById('auth-password');
+  const error = document.getElementById('auth-error');
+
+  function unlock() {
+    document.body.classList.remove('auth-locked');
+    if (gate) gate.hidden = true;
+  }
+
+  try {
+    if (localStorage.getItem(AUTH_STORAGE_KEY) === '1') {
+      unlock();
+      return Promise.resolve();
+    }
+  } catch (err) {
+    console.warn('[app.js] localStorage unavailable', err);
+  }
+
+  if (!gate || !form || !input) return Promise.resolve();
+
+  gate.hidden = false;
+  document.body.classList.add('auth-locked');
+  input.focus();
+
+  return new Promise(resolve => {
+    form.addEventListener('submit', ev => {
+      ev.preventDefault();
+      if (input.value.trim() !== SITE_PASSWORD) {
+        if (error) error.textContent = '密码错误，请重新输入。';
+        input.value = '';
+        input.focus();
+        return;
+      }
+
+      try {
+        localStorage.setItem(AUTH_STORAGE_KEY, '1');
+      } catch (err) {
+        console.warn('[app.js] localStorage unavailable', err);
+      }
+      input.value = '';
+      if (error) error.textContent = '';
+      unlock();
+      resolve();
+    }, { once: false });
+  });
+}
+
 (async () => {
+  await requireSitePassword();
+
   const nav = document.getElementById('categories');
   const list = document.getElementById('exam-list');
   const search = document.getElementById('search');

@@ -10,9 +10,22 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/app-icons/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/app-icons/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/app-icons/apple-touch-icon.png" />
-  <link rel="stylesheet" href="style/css/style.css?v=13" />
+  <link rel="stylesheet" href="style/css/style.css?v=14" />
 </head>
-<body>
+<body class="auth-locked">
+  <section id="auth-gate" class="auth-gate" aria-labelledby="auth-title">
+    <form id="auth-form" class="auth-card">
+      <h1 id="auth-title">访问验证</h1>
+      <p>请输入访问密码后进入武大数统院本科试卷归档。</p>
+      <label for="auth-password">访问密码</label>
+      <div class="auth-input-row">
+        <input id="auth-password" type="password" autocomplete="current-password" required autofocus />
+        <button type="submit">进入</button>
+      </div>
+      <p id="auth-error" class="auth-error" role="alert" aria-live="polite"></p>
+    </form>
+  </section>
+
   <header class="site-header">
     <div class="header-inner">
       <div class="brand">
@@ -57,6 +70,6 @@
     <p><a href="https://github.com/miracleyang-dev/whu-math-exams">github.com/miracleyang-dev/whu-math-exams</a></p>
   </footer>
 
-  <script src="style/js/app.js?v=13"></script>
+  <script src="style/js/app.js?v=14"></script>
 </body>
 </html>
