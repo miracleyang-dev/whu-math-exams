@@ -292,6 +292,19 @@
       "sha256": "60f4d2a4207aa288bd6b5e8bf2571d4ccfe81544686dfda7131244cc1b6ba2ef"
     },
     {
+      "id": "numerical-analysis_final_luxiliang",
+      "category_id": "06-applied-computational",
+      "course_slug": "numerical-analysis",
+      "course_name_cn": "数值分析",
+      "course_level": "undergraduate",
+      "academic_year": "",
+      "semester": "",
+      "exam_type": "final",
+      "teacher": "吕锡亮",
+      "file_path": "exams/06-applied-computational/numerical-analysis/数值分析_期末_吕锡亮.pdf",
+      "sha256": "a2edb71697a1eb8af6e360ecfe36a8f357d4604d824decaa2add79ee8fd3d890"
+    },
+    {
       "id": "numerical-algebra_2024-2025-2_final_xianghua",
       "category_id": "06-applied-computational",
       "course_slug": "numerical-algebra",
@@ -2643,6 +2656,110 @@
       "teacher": "敖微微",
       "file_path": "exams/02-analysis-pde/pde/数学物理方程_2023-2024-1_期中_敖微微.pdf",
       "sha256": "775225b278029b9beb6b3381cb32ed3c82d604c3a254764e0493376ff5bef110"
+    },
+    {
+      "id": "pde_2024-2025-2_final_zhaohuijiang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "赵会江",
+      "file_path": "exams/02-analysis-pde/pde/偏微分方程_2024-2025-2_期末_赵会江.pdf",
+      "sha256": "f896c4433d005c39c9b82f8593d9902642590a17c5e892ff0b056df9fdf8a5c2"
+    },
+    {
+      "id": "pde_2024-2025-1_midterm_zhaohuijiang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "赵会江",
+      "file_path": "exams/02-analysis-pde/pde/数学物理方程_2024-2025-1_期中_赵会江.pdf",
+      "sha256": "2e3c092275a4319b135f27e1f0f3b4fd165e01cbef50dcdca918852c02a1cc37"
+    },
+    {
+      "id": "pde_2024-2025-1_final_zhaohuijiang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "赵会江",
+      "file_path": "exams/02-analysis-pde/pde/数学物理方程_2024-2025-1_期末_赵会江.pdf",
+      "sha256": "307dcc2581136ffc9f976c95e5ab76d38d6e4deefb1fb3b7a23fff675c512291"
+    },
+    {
+      "id": "ode_2019-2020-1_midterm_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2019-2020",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_2019-2020-1_期中_缪爽.pdf",
+      "sha256": "cf0c55a2f2e6b21ed5c575ddbdac9c0a7519872d12992e2d936a832c07f38b26"
+    },
+    {
+      "id": "ode_2023-2024-2_final_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2023-2024",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_2023-2024-2_期末_缪爽.pdf",
+      "sha256": "ccc6da499ea798ae7e847bd1204816840da3d88e783b73a6f4d1fe601dc9ffcc"
+    },
+    {
+      "id": "ode_unknown2_final_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "",
+      "semester": "",
+      "exam_type": "final",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_未知2_期末_缪爽.pdf",
+      "sha256": "63cbd49ccae2f1d167b26e43a2e8ac025f1a0141ae7bf03084340d7aa74381f8"
+    },
+    {
+      "id": "ode_unknown_midterm_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "",
+      "semester": "",
+      "exam_type": "midterm",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_未知_期中_缪爽.pdf",
+      "sha256": "49e4f6cf58788de6363f08b16ce2f0fad6456eab021b5916bf5f4b3fd07f07f0"
+    },
+    {
+      "id": "ode_unknown_final_miaoshuang",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "",
+      "semester": "",
+      "exam_type": "final",
+      "teacher": "缪爽",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_未知_期末_缪爽.pdf",
+      "sha256": "204220096ed5e93e8d51ea338e508759e90112ed1625d3e9b8cab69589b300ad"
     }
   ]
 }
