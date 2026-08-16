@@ -2773,6 +2773,32 @@
       "teacher": "缪爽",
       "file_path": "exams/02-analysis-pde/ode/常微分方程_未知_期末_缪爽.pdf",
       "sha256": "204220096ed5e93e8d51ea338e508759e90112ed1625d3e9b8cab69589b300ad"
+    },
+    {
+      "id": "ode_2024-2025-1_midterm_aoweiwei",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "敖微微",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_2024-2025-1_期中_敖微微.pdf",
+      "sha256": "cafb56a57ce3593f2f6b3f558bd71fddb198bf840f98dd53e27a6ce29ffc9aa8"
+    },
+    {
+      "id": "advanced-algebra-geo-1_2024-2025-1_midterm_wangchunhui",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "汪春晖",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2024-2025-1_期中_汪春晖.pdf",
+      "sha256": "033b6f57982a3b96883c8634244ed7349115d68a91b3bf17518b1a50c3f95958"
     }
   ]
 }
