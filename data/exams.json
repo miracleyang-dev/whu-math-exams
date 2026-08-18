@@ -2799,6 +2799,45 @@
       "teacher": "汪春晖",
       "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2024-2025-1_期中_汪春晖.pdf",
       "sha256": "033b6f57982a3b96883c8634244ed7349115d68a91b3bf17518b1a50c3f95958"
+    },
+    {
+      "id": "differential-geometry_2024-2025-2_final_liguanghan",
+      "category_id": "04-geometry-topology",
+      "course_slug": "differential-geometry",
+      "course_name_cn": "微分几何",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "李光汉",
+      "file_path": "exams/04-geometry-topology/differential-geometry/微分几何_2024-2025-2_期末_李光汉.pdf",
+      "sha256": "08a8c04ed9666d19f0937ec4b30b3773424654acb0f5e07badd4286b07565abf"
+    },
+    {
+      "id": "pde_2024-2025-2_final_chenhua",
+      "category_id": "02-analysis-pde",
+      "course_slug": "pde",
+      "course_name_cn": "偏微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "陈化",
+      "file_path": "exams/02-analysis-pde/pde/广义函数与偏微分方程_2024-2025-2_期末_陈化.pdf",
+      "sha256": "88b140ff6cb4bc4db55398fb6868891ac7f3b0641b684a6a18e27c9cac4f1626"
+    },
+    {
+      "id": "riemannian-geometry_2024-2025-2_final_chenqun",
+      "category_id": "04-geometry-topology",
+      "course_slug": "riemannian-geometry",
+      "course_name_cn": "黎曼几何",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "final",
+      "teacher": "陈群",
+      "file_path": "exams/04-geometry-topology/riemannian-geometry/黎曼几何_2024-2025-2_期末_陈群.pdf",
+      "sha256": "b9a3c21d5bf381299df3723cacd0238cdde6e32f32691cd08d21db745a607587"
     }
   ]
 }
