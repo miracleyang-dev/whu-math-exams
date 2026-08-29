@@ -9,6 +9,8 @@ foreach ($snippet in @(
   "content.hidden = isMobile;",
   "title.setAttribute('aria-expanded', String(!isMobile));",
   "function scrollToCourse(targetId, behavior = 'smooth')",
+  'const anchor = target.previousElementSibling || target;',
+  'anchor.getBoundingClientRect().bottom',
   'behavior',
   "link.addEventListener('click', event =>"
 )) {
@@ -20,6 +22,8 @@ foreach ($snippet in @(
 foreach ($snippet in @(
   '.cat-courses[hidden]',
   '.cat-title:hover',
+  '.cat-title::after',
+  'border: 0;',
   '.course-block.course-target'
 )) {
   if (-not $css.Contains($snippet)) {

@@ -15,7 +15,7 @@ foreach ($file in 'courses.json', 'exams.json') {
   }
 }
 
-if ($index -notmatch 'style/js/app\.js\?v=16') {
+if ($index -notmatch 'style/js/app\.js\?v=17') {
   throw 'index.html must reference the cache-busting app.js version.'
 }
 

@@ -215,18 +215,33 @@ body.auth-locked #viewer-modal { display: none !important; }
   font-family: 'Noto Serif SC', serif; font-weight: 700;
   font-size: .92rem; color: var(--ink);
   padding-bottom: .5rem; margin-bottom: .4rem;
-  border-bottom: 2px solid var(--crimson);
-  display: flex; justify-content: space-between; align-items: center;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  display: flex; justify-content: flex-start; align-items: center; gap: .45rem;
   width: 100%;
   background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
   cursor: pointer;
   text-align: left;
 }
+.cat-title::after {
+  content: '';
+  width: .42rem;
+  height: .42rem;
+  margin-left: .2rem;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform .18s ease;
+}
+.cat-title[aria-expanded='false']::after { transform: rotate(-45deg) translate(-2px, 2px); }
 .cat-title:hover { color: var(--crimson-deep); }
 .cat-title:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .cat-title .count {
   font-family: 'Inter', sans-serif; font-weight: 500;
   font-size: .7rem; color: var(--ink-3);
+  margin-left: auto;
   background: var(--line-2); padding: .1rem .45rem; border-radius: 10px;
 }
 .cat-courses[hidden] { display: none; }
