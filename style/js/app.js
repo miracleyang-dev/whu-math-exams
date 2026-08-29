@@ -14,6 +14,7 @@ window.addEventListener('error', e => {
 
 const SITE_PASSWORD = 'gamma577215';
 const AUTH_STORAGE_KEY = 'whu-math-exams-authenticated';
+const DATA_VERSION = '2026-08-29-15';
 
 function requireSitePassword() {
   const gate = document.getElementById('auth-gate');
@@ -74,8 +75,8 @@ function requireSitePassword() {
   let courses, exams;
   try {
     const [cR, eR] = await Promise.all([
-      fetch('data/courses.json'),
-      fetch('data/exams.json')
+      fetch(`data/courses.json?v=${DATA_VERSION}`, { cache: 'no-store' }),
+      fetch(`data/exams.json?v=${DATA_VERSION}`, { cache: 'no-store' })
     ]);
     if (!cR.ok) throw new Error('courses.json HTTP ' + cR.status);
     if (!eR.ok) throw new Error('exams.json HTTP ' + eR.status);
