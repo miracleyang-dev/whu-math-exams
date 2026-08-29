@@ -14,7 +14,7 @@ window.addEventListener('error', e => {
 
 const SITE_PASSWORD = 'gamma577215';
 const AUTH_STORAGE_KEY = 'whu-math-exams-authenticated';
-const DATA_VERSION = '2026-08-29-15';
+const DATA_VERSION = '2026-08-29-16';
 
 function requireSitePassword() {
   const gate = document.getElementById('auth-gate');
