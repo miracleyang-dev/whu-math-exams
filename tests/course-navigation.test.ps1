@@ -11,6 +11,7 @@ foreach ($snippet in @(
   "function scrollToCourse(targetId, behavior = 'smooth')",
   'const anchor = target.previousElementSibling || target;',
   'anchor.getBoundingClientRect().bottom',
+  'window.innerHeight * 0.06',
   'behavior',
   "link.addEventListener('click', event =>"
 )) {

@@ -1,5 +1,9 @@
 :{$PORT}
 root * .
+@html path / /index.html
+header @html {
+	Cache-Control "no-cache, must-revalidate"
+}
 @pdf path *.pdf
 header @pdf {
 	Content-Disposition "inline"

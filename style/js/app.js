@@ -14,7 +14,7 @@ window.addEventListener('error', e => {
 
 const SITE_PASSWORD = 'gamma577215';
 const AUTH_STORAGE_KEY = 'whu-math-exams-authenticated';
-const DATA_VERSION = '2026-08-29-17';
+const DATA_VERSION = '2026-08-29-18';
 
 function requireSitePassword() {
   const gate = document.getElementById('auth-gate');
@@ -165,7 +165,7 @@ function requireSitePassword() {
     if (!target) return;
 
     const anchor = target.previousElementSibling || target;
-    const offset = Math.max(96, Math.min(180, window.innerHeight * 0.18));
+    const offset = Math.max(32, Math.min(64, window.innerHeight * 0.06));
     const top = anchor.getBoundingClientRect().bottom + window.scrollY - offset;
     target.classList.remove('course-target');
     window.requestAnimationFrame(() => target.classList.add('course-target'));
