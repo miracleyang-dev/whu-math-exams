@@ -2785,7 +2785,7 @@
       "exam_type": "midterm",
       "teacher": "敖微微",
       "file_path": "exams/02-analysis-pde/ode/常微分方程_2024-2025-1_期中_敖微微.pdf",
-      "sha256": "cafb56a57ce3593f2f6b3f558bd71fddb198bf840f98dd53e27a6ce29ffc9aa8"
+      "sha256": "6926a19de2debacec861bd332898545d41a36a27ed87a85d5ab8553109fe70e2"
     },
     {
       "id": "advanced-algebra-geo-1_2024-2025-1_midterm_wangchunhui",
@@ -2838,6 +2838,110 @@
       "teacher": "陈群",
       "file_path": "exams/04-geometry-topology/riemannian-geometry/黎曼几何_2024-2025-2_期末_陈群.pdf",
       "sha256": "b9a3c21d5bf381299df3723cacd0238cdde6e32f32691cd08d21db745a607587"
+    },
+    {
+      "id": "ode_2024-2025-1_final_aoweiwei",
+      "category_id": "02-analysis-pde",
+      "course_slug": "ode",
+      "course_name_cn": "常微分方程",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "敖微微",
+      "file_path": "exams/02-analysis-pde/ode/常微分方程_2024-2025-1_期末_敖微微.pdf",
+      "sha256": "91010b18400558bda42f116a2c1d8ac6bde89815f9b94544f623c1bf0cbcb604"
+    },
+    {
+      "id": "math-analysis-2_2021-2022-2_midterm_zhangzhengliang-liuxiaochun",
+      "category_id": "01-foundation",
+      "course_slug": "math-analysis-2",
+      "course_name_cn": "数学分析2",
+      "course_level": "undergraduate",
+      "academic_year": "2021-2022",
+      "semester": "2",
+      "exam_type": "midterm",
+      "teacher": "张正良&刘晓春",
+      "file_path": "exams/01-foundation/math-analysis-2/数学分析2_2021-2022-2_期中_张正良&刘晓春.pdf",
+      "sha256": "70f7c3776460c176f33e23aeabd1650b61e72ee1bcc01bdcda1c42ed246b82a1"
+    },
+    {
+      "id": "probability-theory_2022-2023-1_final_liuwei",
+      "category_id": "05-probability-statistics",
+      "course_slug": "probability-theory",
+      "course_name_cn": "概率论",
+      "course_level": "undergraduate",
+      "academic_year": "2022-2023",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "刘伟",
+      "file_path": "exams/05-probability-statistics/probability-theory/概率论_2022-2023-1_期末_刘伟.pdf",
+      "sha256": "f40f28a67549bcc2e1519183d613ab3d2b0d0e9894cb6322baa0478e9768386f"
+    },
+    {
+      "id": "probability-theory_2024-2025-1_mock_gaofuqing",
+      "category_id": "05-probability-statistics",
+      "course_slug": "probability-theory",
+      "course_name_cn": "概率论",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "mock",
+      "teacher": "高付清",
+      "file_path": "exams/05-probability-statistics/probability-theory/概率论_2024-2025-1_期末复习题_高付清.pdf",
+      "sha256": "4c27c9e9ea5025b35e30443b08ebedc5020a445a2a3aae3b9a939e46eaa900d9"
+    },
+    {
+      "id": "prob-and-stat_2021-2022-1_final_liuwei",
+      "category_id": "05-probability-statistics",
+      "course_slug": "prob-and-stat",
+      "course_name_cn": "概率论与数理统计",
+      "course_level": "undergraduate",
+      "academic_year": "2021-2022",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "刘伟",
+      "file_path": "exams/05-probability-statistics/prob-and-stat/概率论与数理统计_2021-2022-1_期末_刘伟.pdf",
+      "sha256": "71ac342628a3cb7c20a4000d2899920afc23483b6922e36fc746b187610e0560"
+    },
+    {
+      "id": "modern-math-topics_2024-2025-2_mock_fanhouhong",
+      "category_id": "04-geometry-topology",
+      "course_slug": "modern-math-topics",
+      "course_name_cn": "现代数学选讲",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "2",
+      "exam_type": "mock",
+      "teacher": "范后宏",
+      "file_path": "exams/04-geometry-topology/modern-math-topics/现代数学选讲_2024-2025-2_习题_范后宏.pdf",
+      "sha256": "384cacceb50a970f9770b69b6d5fbc56aa6d4259da11854d78affc36975cfb07"
+    },
+    {
+      "id": "advanced-algebra-geo-1_2024-2025-1_midterm_sunjun",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "midterm",
+      "teacher": "孙俊",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2024-2025-1_期中_孙俊.pdf",
+      "sha256": "7304a6a88c0a0bc20aa2cd5670558576b949b37db018020de74327e657a33698"
+    },
+    {
+      "id": "advanced-algebra-geo-1_2024-2025-1_final_tuyuping",
+      "category_id": "01-foundation",
+      "course_slug": "advanced-algebra-geo-1",
+      "course_name_cn": "高等代数与解析几何1",
+      "course_level": "undergraduate",
+      "academic_year": "2024-2025",
+      "semester": "1",
+      "exam_type": "final",
+      "teacher": "涂玉平",
+      "file_path": "exams/01-foundation/advanced-algebra-geo-1/高等代数与解析几何1_2024-2025-1_期末_涂玉平.pdf",
+      "sha256": "418ac9f2a2ee21fa9cd88ec085a5c90e97efabf6c047bfc77b2ec9a24f9a7d3c"
     }
   ]
 }

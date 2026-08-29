@@ -47,7 +47,8 @@
         { "slug": "differential-geometry","name": "微分几何" },
         { "slug": "differential-manifold","name": "微分流形" },
         { "slug": "riemannian-geometry",  "name": "黎曼几何" },
-        { "slug": "homology-theory","name": "同调论" }
+        { "slug": "homology-theory","name": "同调论" },
+        { "slug": "modern-math-topics","name": "现代数学选讲" }
       ]
     },
     {
