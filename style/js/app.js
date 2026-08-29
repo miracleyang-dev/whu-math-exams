@@ -101,12 +101,14 @@ function requireSitePassword() {
   // ---- Sidebar ----
   function buildSidebar() {
     nav.replaceChildren();
+    const isMobile = window.matchMedia('(max-width: 860px)').matches;
     categories.forEach(cat => {
       const examsInCat = allExams.filter(e => e.category_id === cat.id).length;
       const grp = document.createElement('div');
       grp.className = 'cat-group';
 
-      const title = document.createElement('div');
+      const title = document.createElement('button');
+      title.type = 'button';
       title.className = 'cat-title';
       title.append(document.createTextNode(cat.name));
 
@@ -114,6 +116,18 @@ function requireSitePassword() {
       count.className = 'count';
       count.textContent = examsInCat;
       title.append(count);
+
+      const content = document.createElement('div');
+      content.className = 'cat-courses';
+      content.id = `category-${cat.id}`;
+      content.hidden = isMobile;
+      title.setAttribute('aria-controls', content.id);
+      title.setAttribute('aria-expanded', String(!isMobile));
+      title.addEventListener('click', () => {
+        const willExpand = content.hidden;
+        content.hidden = !willExpand;
+        title.setAttribute('aria-expanded', String(willExpand));
+      });
       grp.append(title);
 
       cat.courses.forEach(course => {
@@ -133,11 +147,29 @@ function requireSitePassword() {
           link.append(badge);
         }
 
-        grp.append(link);
+        link.addEventListener('click', event => {
+          event.preventDefault();
+          history.replaceState(null, '', link.hash);
+          scrollToCourse(`${cat.id}-${course.slug}`);
+        });
+        content.append(link);
       });
 
+      grp.append(content);
       nav.append(grp);
     });
+  }
+
+  function scrollToCourse(targetId, behavior = 'smooth') {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const offset = Math.max(96, Math.min(180, window.innerHeight * 0.18));
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    target.classList.remove('course-target');
+    window.requestAnimationFrame(() => target.classList.add('course-target'));
+    window.setTimeout(() => target.classList.remove('course-target'), 900);
+    window.scrollTo({ top: Math.max(0, top), behavior });
   }
 
   // ---- Main list ----
@@ -270,6 +302,9 @@ function requireSitePassword() {
 
   buildSidebar();
   render();
+  if (location.hash) {
+    window.requestAnimationFrame(() => scrollToCourse(location.hash.slice(1), 'auto'));
+  }
 
   // ---- Search ----
   let timer;

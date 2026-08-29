@@ -217,12 +217,19 @@ body.auth-locked #viewer-modal { display: none !important; }
   padding-bottom: .5rem; margin-bottom: .4rem;
   border-bottom: 2px solid var(--crimson);
   display: flex; justify-content: space-between; align-items: center;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
 }
+.cat-title:hover { color: var(--crimson-deep); }
+.cat-title:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .cat-title .count {
   font-family: 'Inter', sans-serif; font-weight: 500;
   font-size: .7rem; color: var(--ink-3);
   background: var(--line-2); padding: .1rem .45rem; border-radius: 10px;
 }
+.cat-courses[hidden] { display: none; }
 .cat-group a {
   display: flex; justify-content: space-between; align-items: center;
   padding: .3rem .25rem;
@@ -266,6 +273,14 @@ body.auth-locked #viewer-modal { display: none !important; }
   margin-bottom: 1.1rem;
   padding-bottom: 1.1rem;
   border-bottom: 1px dashed var(--line);
+}
+.course-block.course-target {
+  animation: course-target .9s ease;
+}
+@keyframes course-target {
+  0% { background: transparent; }
+  35% { background: #f0fdfa; }
+  100% { background: transparent; }
 }
 .course-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .course-block h3 {
@@ -464,6 +479,10 @@ body.auth-locked #viewer-modal { display: none !important; }
   .viewer-actions { gap: .35rem; }
   .viewer-actions a, .viewer-actions button { padding: .3rem .65rem; font-size: .78rem; }
   #viewer-frame { border-radius: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .course-block.course-target { animation: none; background: #f0fdfa; }
 }
 
 /* Small phones */
